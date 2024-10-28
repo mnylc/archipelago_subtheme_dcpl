@@ -60,3 +60,8 @@
 /drush
 /drupal.phar
 /drupal
+/node_modules
+.idea/archipelago_subtheme_dcpl.iml
+.idea/modules.xml
+.idea/php.xml
+.idea/vcs.xml
