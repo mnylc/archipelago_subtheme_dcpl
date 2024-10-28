@@ -1,0 +1,28 @@
+// Bootstrap
+// -----------------------------------------------------------------------------
+@import 'init';
+@import 'bootstrap';
+
+// Include any custom stylesheets here
+// -----------------------------------------------------------------------------
+@import "base/elements";
+@import "base/functions";
+@import "base/helpers";
+@import "base/typography";
+
+
+/* Navigation basic size */
+.page {
+  nav {
+    min-height: 10rem;
+  }
+}
+
+/* Color changing body */
+
+body {
+  transition: background-color 1s linear;
+  &.scrolled {
+    background-color: $white-light;
+  }
+}

@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+{% set page_attributes = attributes ?: create_attribute() %}
+{% set
+  page_classes = [
+    'page','h-100'
+  ]|merge(page_utility_classes ?: [])
+%}
+
+<div {{ page_attributes.addClass(page_classes) }}>
+	{% block page_navigation %}
+		{% include 'archipelago_subtheme_dcpl:page-navigation' %}
+	{% endblock %}
+  {% block page_content %}
+    {% include 'archipelago_subtheme_dcpl:page-content' with {
+      page_main_utility_classes: ['py-5'],
+      page_header_container_utility_classes: ['mb-3'],
+    }%}
+  {% endblock %}
+
+	{% block page_footer %}
+		{% include 'archipelago_subtheme_dcpl:page-footer' with {
+      footer_utility_classes: ['mt-auto','bg-quaternary']
+    } %}
+	{% endblock %}
+</div>

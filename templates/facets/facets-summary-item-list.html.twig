@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a facets summary item list.
+ *
+ * Available variables:
+ * - items: A list of items. Each item contains:
+ *   - attributes: HTML attributes to be applied to each list item.
+ *   - value: The content of the list element.
+ * - title: The title of the list.
+ * - list_type: The tag for list element ("ul" or "ol").
+ * - wrapper_attributes: HTML attributes to be applied to the list wrapper.
+ * - attributes: HTML attributes to be applied to the list.
+ * - empty: A message to display when there are no items. Allowed value is a
+ *   string or render array.
+ * - context: A list of contextual data associated with the list. May contain:
+ *   - list_style: The custom list style.
+ *
+ * @see facets_summary_preprocess_facets_summary_item_list()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if context.list_style %}
+  {%- set attributes = attributes.addClass('item-list__' ~ context.list_style) %}
+{% endif %}
+{% if items or empty %}
+  {%- if title is not empty -%}
+    <h3>{{ title }}</h3>
+  {%- endif -%}
+  {%- if items -%}
+    <{{ list_type }}{{ attributes.addClass('facet-summary','ms-0','ps-0') }}>
+      {%- for item in items -%}
+        {%- if item.value['#theme'] is defined and (item.value['#theme'] == 'facets_summary_count' or item.value['#theme'] == 'facets_summary_empty') -%}
+          <li{{ item.attributes.addClass('facet-summary-item--count','me-1')}}>
+        {%- else -%}
+            {%- if item.attributes.hasClass('facet-summary-item--query') -%}
+        <li{{ item.attributes.addClass('btn','btn-secondary','btn-sm', 'me-1')}}>
+            {%-  elseif item.attributes.hasClass('facet-summary-item--clear')  -%}
+        <li{{ item.attributes.addClass('btn','btn-tertiary','btn-sm', 'me-1')}}>
+            {%-  else -%}
+        <li{{ item.attributes.addClass('btn','btn-primary','btn-sm', 'me-1')}}>
+            {%- endif -%}
+        {%- endif -%}
+        {{ item.value }}</li>
+      {%- endfor -%}
+    </{{ list_type }}>
+  {%- else -%}
+    {{- empty -}}
+  {%- endif -%}
+{%- endif %}

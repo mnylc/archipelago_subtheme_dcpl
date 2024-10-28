@@ -1,0 +1,1 @@
+{"version":3,"file":"components/form-element--label/form-element--label.css","mappings":"AACA;EACE;EAAA;EACA;AAAF,C","sources":["webpack://archipelago_subtheme_dcpl/./components/form-element--label/form-element--label.scss"],"sourcesContent":["\n.form-label {\n  min-width: fit-content;\n  padding-right: 0.2rem;\n}\n"],"names":[],"sourceRoot":""}

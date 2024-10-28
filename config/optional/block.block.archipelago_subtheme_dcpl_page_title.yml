@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - archipelago_subtheme_dcpl
+id: archipelago_subtheme_dcpl_page_title
+theme: archipelago_subtheme_dcpl
+region: header
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: "Page title"
+  label_display: "0"
+  provider: core
+visibility: {}

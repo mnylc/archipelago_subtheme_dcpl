@@ -1,0 +1,16 @@
+{
+    "/build/js/main.script.js": "/build/js/main.script.js",
+    "/build/css/main.style.css": "/build/css/main.style.css",
+    "/components/html/html.css": "/components/html/html.css",
+    "/components/form-element/form-element.css": "/components/form-element/form-element.css",
+    "/components/form-element--label/form-element--label.css": "/components/form-element--label/form-element--label.css",
+    "/components/dropdown-menu/dropdown-menu.css": "/components/dropdown-menu/dropdown-menu.css",
+    "/components/page/page.css": "/components/page/page.css",
+    "/components/page-navigation/page-navigation.css": "/components/page-navigation/page-navigation.css",
+    "/components/page-footer/page-footer.css": "/components/page-footer/page-footer.css",
+    "/components/page-content/page-content.css": "/components/page-content/page-content.css",
+    "/components/navbar/navbar.css": "/components/navbar/navbar.css",
+    "/components/navbar-brand/navbar-brand.css": "/components/navbar-brand/navbar-brand.css",
+    "/components/nav/nav.css": "/components/nav/nav.css",
+    "/components/nav-item/nav-item.css": "/components/nav-item/nav-item.css"
+}

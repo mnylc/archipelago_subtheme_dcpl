@@ -1,0 +1,5 @@
+# Schema for the configuration files of the archipelago_subtheme_dcpl theme.
+
+archipelago_subtheme_dcpl.settings:
+  type: theme_settings
+  label: 'archipelago_subtheme_dcpl settings'

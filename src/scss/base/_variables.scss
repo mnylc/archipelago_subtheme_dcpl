@@ -1,0 +1,397 @@
+/**
+ * Variables
+ * Variables should follow the $component-state-property-size formula for
+ * consistent naming. Examples:
+ * $nav-link-disabled-color
+ * $modal-content-box-shadow-xs
+ *
+ * Customization:
+ * To customize Bootstrap variables:
+ * Copy the desired variable from node_modules/bootstrap/scss/_variables.scss
+ * @see https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+ * Change the value and remove the !default flag.
+ * Examples:
+ * $body-bg: #000;
+ * $body-color: $gray-100;
+ */
+$primary: rgb(211,101,58);
+$primary-rgb: 211,101,58;
+$secondary: rgb(215,172,123);
+$secondary-rgb: 215,172,123;
+$tertiary: rgb(136,	145,	137);
+$tertiary-rgb: 136,	145,	137;
+$quaternary: rgb(69,	28,	20);
+$gray-800: rgb(57,	62,	84	);
+$gray-200: rgb(157,	157,	159);
+$black: rgb(42,	48,	68);
+$white: rgb(250,248,247);
+$white-light:rgb(252,251,252);
+$body-bg: $white !default;
+$blue: rgb(27,79,136);
+$body-color: $gray-800 !default;;
+
+$theme-colors: (primary: $primary, secondary: $secondary, tertiary: $tertiary, quaternary:$quaternary, light: $gray-200, dark: $gray-800);
+$navbar-dark-color: rgba($gray-200, 1);
+$navbar-dark-hover-color: rgba($gray-200, .75);
+$border-radius: 0.275rem;
+$border-radius-lg: 0.275rem;
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+$navbar-brand-padding-y: 0;
+$headings-color: rgba($black, 1);
+$font-family-sans-serif: "Inter", sans-serif;
+$font-family-base: $font-family-sans-serif;
+$headings-font-family: "Poppins", sans-serif;
+$btn-font-family: "Poppins", sans-serif;
+$font-weight-base: 400 !default;
+$link-color:                              $blue !default;
+$link-decoration:                         nnull !default;
+$link-shade-percentage:                   10% !default;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration:                   null !default;
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.btn-primary,.btn-secondary {
+  a {
+    color: $navbar-dark-color;
+    &hover {
+      color: $navbar-dark-hover-color;
+    }
+  }
+}
+
+
+a {
+  font-family: "Poppins", sans-serif;
+}
+#main-content-wrapper {
+  min-height: calc(100vh - 300px);
+  height: auto !important;
+  margin: 0 auto -300px;
+}
+footer {
+  height: 300px;
+}
+#push-footer {
+  height: 300px;
+}
+
+.block-system-branding-block {
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+div[data-drupal-selector="edit-actions"] {
+  align-items: end;
+  display: flex;
+}
+/* advanced search */
+.advanced-search-box {
+  .views-exposed-form {
+    .form-row {
+      .fieldset-wrapper {
+        column-gap: 0;
+        flex-flow: column;
+        row-gap: 1rem;
+      }
+    }
+  }
+}
+
+/* advanced search as exposed modal*/
+
+.views-exposed-form.advanced-search-box {
+    .form-row {
+      .fieldset-wrapper {
+        column-gap: 0;
+        flex-flow: column;
+        row-gap: 1rem;
+      }
+    }
+}
+
+  .views-exposed-form.advanced-search-box {
+    .form-row {
+      min-height: 0;
+      width: 100%;
+      flex-flow: column;
+      fieldset {
+        min-height: 0;
+        flex-direction: column !important;
+        &.form-wrapper {
+          display: flex;
+          column-gap: 1rem;
+          & > div {
+            display: flex;
+            align-items: end;
+          }
+          label {
+            @extend .visually-hidden !optional;
+          }
+          .js-form-item {
+            display: flex;
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+
+
+
+.advanced-search-box {
+  .views-exposed-form {
+    .form-row {
+      min-height: 0;
+      width: 100%;
+      flex-flow: column;
+      fieldset {
+        min-height: 0;
+        flex-direction: column !important;
+        &.form-wrapper {
+          display: flex;
+          column-gap: 1rem;
+          & > div {
+            display: flex;
+            align-items: end;
+          }
+          label {
+            @extend .visually-hidden !optional;
+          }
+          .js-form-item {
+            display: flex;
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.advanced-search-box {
+  .form-actions.mb-3 {
+    margin-top: 1rem;
+  }
+}
+
+
+.form-row > div, .form-row > fieldset {
+  padding-right: .3125rem;
+  padding-left: .3125rem;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: auto;
+  max-width:none
+}
+
+.form-row .form-actions {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self:flex-end
+}
+
+#main-content .form-modal {
+  margin-bottom: 0.5rem;
+}
+
+
+.d-flex.hidden {
+  display: none !important;
+}
+.hidden {
+  display: none !important;
+}
+strong {
+  background-color: var(--bs-yellow);
+}
+.views-field-search-api-excerpt {
+  strong {
+    margin-right: 0.25rem;
+  }
+}
+
+mark {
+  background-color: var(--bs-yellow);
+}
+
+.page-wrapper .sticky-top {
+  z-index:501;
+  top: var(--drupal-displace-offset-top, 0);
+}
+
+.view-filters {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+#drupal-off-canvas-wrapper > div:not(.ui-resizable-handle,.ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)),
+#drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *))
+{
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+#drupal-off-canvas-wrapper > div:not(.ui-resizable-handle,.ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)):after,
+#drupal-off-canvas-wrapper > div:not(.ui-resizable-handle,.ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)):before,
+#drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *)):before,
+#drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *)):after
+{
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Set base styles for the off-canvas dialog.
+ * @internal
+
+
+#drupal-off-canvas-wrapper *:where(:not(svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)) {
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+#drupal-off-canvas-wrapper *:where(:not(svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)):after,
+#drupal-off-canvas-wrapper *:where(:not(svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)):before {
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+*/
+
+#drupal-off-canvas-wrapper *:not(details) a,
+#drupal-off-canvas-wrapper *:not(details) .link {
+  text-decoration: none;
+  color: var(--off-canvas-link-color);
+}
+
+#drupal-off-canvas-wrapper *:not(details) hr {
+  height: 1px;
+  background: var(--off-canvas-border-color);
+}
+
+#drupal-off-canvas-wrapper *:not(details) h1,
+#drupal-off-canvas-wrapper .heading-a {
+  font-size: 1.4375rem;
+  line-height: 1.2;
+}
+
+#drupal-off-canvas-wrapper *:not(details) h2,
+#drupal-off-canvas-wrapper .heading-b {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+  font-size: 1.1875rem;
+}
+
+#drupal-off-canvas-wrapper *:not(details) h3,
+#drupal-off-canvas-wrapper .heading-c {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+  /* font-size: 1.0625rem; */
+
+}
+
+#drupal-off-canvas-wrapper *:not(details) h4,
+#drupal-off-canvas-wrapper .heading-d {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+  font-size: 1rem;
+}
+
+#drupal-off-canvas-wrapper *:not(details) h5,
+#drupal-off-canvas-wrapper .heading-e,
+#drupal-off-canvas-wrapper *:not(details) h6,
+#drupal-off-canvas-wrapper .heading-f {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+  font-size: 0.9375rem;
+}
+
+#drupal-off-canvas-wrapper *:not(details) p {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+}
+
+#drupal-off-canvas-wrapper *:not(details) img {
+  max-width: 100%;
+  height: auto;
+}
+
+#drupal-off-canvas-wrapper *:not(details) .links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#drupal-off-canvas-wrapper *:not(details) .links li {
+  margin: calc(var(--off-canvas-vertical-spacing-unit) /2) 0;
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper summary {
+  margin: 1rem 0.5rem;
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper .fieldset, .archipelago-subtheme-nysa #drupal-off-canvas-wrapper fieldset {
+  border:none;
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper {
+  --off-canvas-vertical-spacing-unit: 0.5rem;
+  --off-canvas-padding: 0rem;
+  --off-canvas-focus-outline-width: 2px;
+  padding: 0 var(--off-canvas-padding) var(--off-canvas-padding);
+  --off-canvas-first-cell-padding-start: 0.5rem;
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table {
+  --bs-table-bg: var(--off-canvas-background-color-dark);
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper details {
+  --off-canvas-padding: 1.25rem;
+  --off-canvas-vertical-spacing-unit: 0.5rem;
+  --off-canvas-details-border-width: 0;
+  --off-canvas-details-summary-padding: 0.625rem 1.25rem;
+  --off-canvas-details-summary-font-size: 0.875rem;
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper tr {
+  border-bottom: none;
+}
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper th:first-child {
+  --off-canvas-table-cell-padding: 2px;
+  display: flex;
+  align-items: center;
+  min-height: 3.125rem;
+  gap: var(--off-canvas-table-cell-padding);
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th,
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a,
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a:hover,
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a:focus {
+  color: var(--off-canvas-background-color-light);
+}
+
+.archipelago-subtheme-nysa #drupal-off-canvas-wrapper .table >:not(caption)>*>td {
+  background-color: unset;
+}
+
+

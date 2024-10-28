@@ -1,0 +1,47 @@
+name: archipelago_subtheme_dcpl
+description: 'Archipelago DCPL Radix Subtheme'
+screenshot: screenshot.png
+'alt text': 'archipelago_subtheme_dcpl theme screenshot'
+core_version_requirement: ^10
+version: 1.0.0
+engine: twig
+type: theme
+'base theme': radix
+starterkit: true
+logo: logo.svg
+dependencies:
+  - 'drupal:serialization'
+'interface translation project': archipelago_subtheme_dcpl
+'interface translation server pattern': themes/custom/archipelago_subtheme_dcpl/translations/%language.po
+regions:
+  navbar_branding: 'Navbar branding'
+  navbar_left: 'Navbar left'
+  navbar_right: 'Navbar right'
+  navbar_bottom: 'Navbar Bottom'
+  header: Header
+  sidebar_first: 'Sidebar First'
+  content: Content
+  page_bottom: 'Page bottom'
+  footer: Footer
+libraries:
+  - archipelago_subtheme_dcpl/style
+ckeditor5-stylesheets:
+  - build/css/main.style.css
+libraries-override:
+  core/drupal.dialog.off_canvas:
+    css:
+      base:
+        misc/dialog/off-canvas/css/reset.css: false
+        misc/dialog/off-canvas/css/base.css: false
+libraries-extend:
+  core/drupal.ajax:
+    - archipelago_subtheme_dcpl/drupal.ajax
+  core/drupal.checkbox:
+    - archipelago_subtheme_dcpl/drupal.checkbox
+  core/drupal.message:
+    - archipelago_subtheme_dcpl/drupal.message
+  core/drupal.progress:
+    - archipelago_subtheme_dcpl/drupal.progress
+  clientside_validation_jquery/cv.jquery.validate:
+    - archipelago_subtheme_dcpl/jquery.validate
+generator: 'radix_starterkit:1.0.0'

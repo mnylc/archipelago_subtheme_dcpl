@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * @file
+ * Custom theme hooks.
+ */
+
+function archipelago_subtheme_dcpl_preprocess(&$variables)
+{
+  $variables['#attached']['library'][] = 'archipelago_subtheme_dcpl/fontawesome';
+}
