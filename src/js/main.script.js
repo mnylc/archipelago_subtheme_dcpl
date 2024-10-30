@@ -8,7 +8,7 @@ import Popover from 'bootstrap/js/dist/popover';
 
   'use strict';
 
-  Drupal.behaviors.bootstrap_nysa = {
+  Drupal.behaviors.bootstrap_dcpl = {
     attach: function (context, settings) {
       var position = $(window).scrollTop();
       $(window).scroll(function () {
@@ -28,10 +28,19 @@ import Popover from 'bootstrap/js/dist/popover';
         }
         position = scroll;
       });
+      const children_collapsible_navbars = context.querySelectorAll('.navbar-collapse');
+      const $elements_children_collapsible_navbars = once('dcpl_navbar_toggle', children_collapsible_navbars);
+      $elements_children_collapsible_navbars.forEach(function (ele) {
+        ele.addEventListener('shown.bs.collapse', event => {
+          document.querySelector('body').classList.toggle('noscroll');
+        })
+      });
+
+
       const children_elements_to_once = context.querySelectorAll('.sbf-mark-highlight');
       const context_is_element_to_once = context !== document && context.classList.contains('sbf-mark-highlight') ? context : [];
-      const $element_children = once('nysa', children_elements_to_once);
-      const $element_self = once('nysa', context_is_element_to_once);
+      const $element_children = once('dcpl', children_elements_to_once);
+      const $element_self = once('dcpl', context_is_element_to_once);
       $element_children.forEach(mark);
       $element_self.forEach(mark);
         function mark(element, index) {
@@ -42,7 +51,7 @@ import Popover from 'bootstrap/js/dist/popover';
           if ($targetAnchor && $content_to_mark) {
             if ($targetAnchor.type === "button") {
               // By once-ing it we won't keep hitting it.
-              const $targetAnchor_once = once('nysa', $targetAnchor);
+              const $targetAnchor_once = once('dcpl', $targetAnchor);
               $targetAnchor_once.forEach(function (ele) {
                 ele.click();
               });
@@ -92,7 +101,7 @@ import Popover from 'bootstrap/js/dist/popover';
     }
   };
 
-  Drupal.behaviors.bootstrap_nysa_scrollspy = {
+  Drupal.behaviors.bootstrap_dcpl_scrollspy = {
     attach: function (context, settings) {
       function SetFixedPositioning(ele) {
         let element = $(ele);
@@ -185,7 +194,7 @@ import Popover from 'bootstrap/js/dist/popover';
       /* resize needs to be aware of this offset.
                Can't be any offset.
                 */
-      $(once('nysa-list-scrollspy', '.list-scrollspy', context)).each(function () {
+      $(once('dcpl-list-scrollspy', '.list-scrollspy', context)).each(function () {
         var ele = this;
         // To make the fixed scrollspy absolute when we reach the end (imagine a scalled window)
         // or a another block after the content we are spying on

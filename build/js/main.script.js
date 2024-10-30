@@ -3171,7 +3171,7 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
 (function ($, Drupal, once, Mark) {
   'use strict';
 
-  Drupal.behaviors.bootstrap_nysa = {
+  Drupal.behaviors.bootstrap_dcpl = {
     attach: function attach(context, settings) {
       var position = $(window).scrollTop();
       $(window).scroll(function () {
@@ -3190,10 +3190,17 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
         }
         position = scroll;
       });
+      var children_collapsible_navbars = context.querySelectorAll('.navbar-collapse');
+      var $elements_children_collapsible_navbars = once('dcpl_navbar_toggle', children_collapsible_navbars);
+      $elements_children_collapsible_navbars.forEach(function (ele) {
+        ele.addEventListener('shown.bs.collapse', function (event) {
+          document.querySelector('body').classList.toggle('noscroll');
+        });
+      });
       var children_elements_to_once = context.querySelectorAll('.sbf-mark-highlight');
       var context_is_element_to_once = context !== document && context.classList.contains('sbf-mark-highlight') ? context : [];
-      var $element_children = once('nysa', children_elements_to_once);
-      var $element_self = once('nysa', context_is_element_to_once);
+      var $element_children = once('dcpl', children_elements_to_once);
+      var $element_self = once('dcpl', context_is_element_to_once);
       $element_children.forEach(mark);
       $element_self.forEach(mark);
       function mark(element, index) {
@@ -3203,7 +3210,7 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
           if ($targetAnchor && $content_to_mark) {
             if ($targetAnchor.type === "button") {
               // By once-ing it we won't keep hitting it.
-              var $targetAnchor_once = once('nysa', $targetAnchor);
+              var $targetAnchor_once = once('dcpl', $targetAnchor);
               $targetAnchor_once.forEach(function (ele) {
                 ele.click();
               });
@@ -3251,7 +3258,7 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
       ;
     }
   };
-  Drupal.behaviors.bootstrap_nysa_scrollspy = {
+  Drupal.behaviors.bootstrap_dcpl_scrollspy = {
     attach: function attach(context, settings) {
       function SetFixedPositioning(ele) {
         var element = $(ele);
@@ -3340,7 +3347,7 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
       /* resize needs to be aware of this offset.
                Can't be any offset.
                 */
-      $(once('nysa-list-scrollspy', '.list-scrollspy', context)).each(function () {
+      $(once('dcpl-list-scrollspy', '.list-scrollspy', context)).each(function () {
         var ele = this;
         // To make the fixed scrollspy absolute when we reach the end (imagine a scalled window)
         // or a another block after the content we are spying on

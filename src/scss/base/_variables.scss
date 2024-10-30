@@ -50,7 +50,53 @@ $link-decoration:                         nnull !default;
 $link-shade-percentage:                   10% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
+$navbar-light-toggler-icon-bg: initial;
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
+.navbar-toggler {
+  width: 3rem;
+  height: 3rem;
+}
+.archipelago-subtheme-dcpl {
+  .navbar-toggler-icon {
+    display: flex;
+    vertical-align: middle;
+    background-size: 100%;
+    background-image: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    height:auto;
+    svg {
+      rect {
+        stroke-width: 15.8114;
+        stroke-linecap: round;
+        stroke-linejoin: bevel;
+        color: transparent;
+        fill: transparent;
+      }
+    }
 
+    svg .svg-icon-step4 {
+      fill: $secondary;
+    }
+
+    svg .svg-icon-step3 {
+      fill: $secondary;
+    }
+
+    svg .svg-icon-step2 {
+      fill: $secondary;
+    }
+
+    svg .svg-icon-step1 {
+      fill: $secondary;
+    }
+  }
+}
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);

@@ -16,6 +16,44 @@
  * $body-bg: #000;
  * $body-color: $gray-100;
  */
+.navbar-toggler {
+  width: 3rem;
+  height: 3rem;
+}
+
+.archipelago-subtheme-dcpl .navbar-toggler-icon {
+  display: flex;
+  vertical-align: middle;
+  background-size: 100%;
+  background-image: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg rect {
+  stroke-width: 15.8114;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  color: transparent;
+  fill: transparent;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step4 {
+  fill: rgb(215, 172, 123);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step3 {
+  fill: rgb(215, 172, 123);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step2 {
+  fill: rgb(215, 172, 123);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step1 {
+  fill: rgb(215, 172, 123);
+}
+
 .visually-hidden, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -344,6 +382,44 @@ mark, .mark {
  * $body-bg: #000;
  * $body-color: $gray-100;
  */
+.navbar-toggler {
+  width: 3rem;
+  height: 3rem;
+}
+
+.archipelago-subtheme-dcpl .navbar-toggler-icon {
+  display: flex;
+  vertical-align: middle;
+  background-size: 100%;
+  background-image: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg rect {
+  stroke-width: 15.8114;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  color: transparent;
+  fill: transparent;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step4 {
+  fill: rgb(215, 172, 123);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step3 {
+  fill: rgb(215, 172, 123);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step2 {
+  fill: rgb(215, 172, 123);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step1 {
+  fill: rgb(215, 172, 123);
+}
+
 .visually-hidden, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -4502,10 +4578,10 @@ textarea.form-control-lg {
   --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-nav-link-padding-x: 0.5rem;
-  --bs-navbar-toggler-padding-y: 0.25rem;
-  --bs-navbar-toggler-padding-x: 0.75rem;
+  --bs-navbar-toggler-padding-y: 0;
+  --bs-navbar-toggler-padding-x: 0;
   --bs-navbar-toggler-font-size: 1.25rem;
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2857, 62, 84, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --bs-navbar-toggler-icon-bg: initial;
   --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
   --bs-navbar-toggler-border-radius: 0;
   --bs-navbar-toggler-focus-width: 0.25rem;
@@ -12425,8 +12501,51 @@ textarea.form-control-lg {
 }
 
 /* Navigation basic size */
+body.noscroll {
+  overflow: hidden;
+}
+
 .page nav {
   min-height: 10rem;
+}
+.page nav .collapsing {
+  transition: none;
+  position: absolute;
+  display: none;
+}
+.page nav .navbar-collapse.collapse {
+  transition: background-color linear 1s;
+  background-color: rgb(250, 248, 247);
+}
+.page nav .navbar-collapse.collapse .nav.navbar-nav {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.page nav .navbar-collapse.collapse.show {
+  position: fixed;
+  display: block;
+  overflow-y: hidden;
+  z-index: -99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(27, 79, 136);
+}
+.page nav .navbar-collapse.collapse.show .nav.navbar-nav {
+  position: relative;
+  left: calc(0px + var(--drupal-displace-offset-left));
+  width: 100%;
+  height: 100%;
+  color: rgb(250, 248, 247);
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+}
+.page nav .navbar-collapse.collapse.show .nav.navbar-nav li.nav-item {
+  font-size: 1.5rem;
 }
 
 /* Color changing body */

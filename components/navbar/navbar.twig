@@ -49,26 +49,81 @@
     {% block branding %}
       {{ branding }}
     {% endblock %}
-
     {% block navbar_toggler %}
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menu-nav" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            id="icon-menu-expand"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg">
+    <rect class="svg-icon-step4"
+          id="step4"
+          width="37.296165"
+          height="4.1811848"
+          x="5.3519173"
+          y="35.790939" />
+    <rect class="svg-icon-step3"
+          id="step3"
+          width="37.296165"
+          height="4.1811848"
+          x="5.3519173"
+          y="5.3205576" />
+    <rect class="svg-icon-vertical1"
+          id="vertical1"
+          width="37.296165"
+          height="4.1811848"
+          x="5.3519173"
+          y="10.181185" />
+    <rect class="svg-icon-vertical2"
+          id="vertical2"
+          width="37.296165"
+          height="4.1811848"
+          x="5.3519173"
+          y="20.303135" />
+    <rect class="svg-icon-vertical3"
+          id="vertical3"
+          width="37.296165"
+          height="4.1811848"
+          x="5.3519173"
+          y="30.425087" />
+    <rect class="svg-icon-step2"
+          id="step2"
+          width="37.296165"
+          height="4.1811848"
+          x="5.3519173"
+          y="15.477351" />
+    <rect class="svg-icon-step1"
+          id="step1"
+          width="37.296165"
+          height="4.1811848"
+          x="5.3519173"
+          y="25.634146" />
+</svg>
+        </span>
+      </button>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#search-nav" aria-controls="navbar-collapse-search" aria-expanded="false" aria-label="Toggle Search">
         <span class="navbar-toggler-icon"></span>
       </button>
     {% endblock %}
-
-    <div class="collapse navbar-collapse">
+    <div id="menu-nav" class="collapse navbar-collapse align-self-start align-self-lg-center justify-content-between">
+      <div class="container">
       {% block left %}
         {{ left }}
       {% endblock %}
-
       {% block right %}
         {{ right }}
       {% endblock %}
+      </div>
     </div>
-    <div class="collapse navbar-collapse">
+    <div id="search-nav" class="collapse navbar-collapse align-items-center align-self-start align-self-lg-center">
+      <div class="container">
       {% block bottom %}
         {{ bottom }}
       {% endblock %}
+      </div>
     </div>
   </div>
 </nav>
