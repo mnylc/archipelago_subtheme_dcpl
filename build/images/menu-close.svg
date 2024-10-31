@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="icon-menu-expand"
+   inkscape:export-filename="menu-expand.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="menu-close.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1"
+     inkscape:cx="-2095"
+     inkscape:cy="1255.5"
+     inkscape:window-width="1392"
+     inkscape:window-height="1212"
+     inkscape:window-x="312"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       class="svg-icon-step4"
+       style="fill:none;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
+       id="step4"
+       width="37.296165"
+       height="4.1811848"
+       x="4"
+       y="40.470383" />
+    <rect
+       class="svg-icon-step3"
+       style="fill:none;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
+       id="step3"
+       width="37.296165"
+       height="4.1811848"
+       x="4"
+       y="10" />
+    <rect
+       class="svg-icon-vertical1"
+       style="fill:none;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
+       id="vertical1"
+       width="37.296165"
+       height="4.1811848"
+       x="4"
+       y="14.860627" />
+    <rect
+       class="svg-icon-vertical2"
+       style="fill:none;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
+       id="vertical2"
+       width="37.296165"
+       height="4.1811848"
+       x="4"
+       y="24.982576" />
+    <rect
+       class="svg-icon-vertical3"
+       style="fill:none;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
+       id="vertical3"
+       width="37.296165"
+       height="4.1811848"
+       x="4"
+       y="35.10453" />
+    <rect
+       class="svg-icon-step2"
+       style="fill:none;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
+       id="step2"
+       width="37.296165"
+       height="4.1811848"
+       x="4"
+       y="20.156794" />
+    <rect
+       class="svg-icon-step1"
+       style="fill:none;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
+       id="step1"
+       width="37.296165"
+       height="4.1811848"
+       x="4"
+       y="30.313587" />
+    <rect
+       class="svg-icon-step4"
+       style="fill:#241c1c;stroke-width:14.0089;stroke-linecap:round;stroke-linejoin:bevel"
+       id="step4-5"
+       width="29.277451"
+       height="4.181149"
+       x="9.2885313"
+       y="-26.29739"
+       transform="matrix(-0.8558268,0.84116615,-0.84594302,-0.8511054,24,-16.729351)"
+       inkscape:label="X2" />
+    <rect
+       class="svg-icon-step4"
+       style="fill:#241c1c;stroke-width:14.0089;stroke-linecap:round;stroke-linejoin:bevel"
+       id="step4-5-3"
+       width="29.277451"
+       height="4.181149"
+       x="-38.711998"
+       y="-25.882719"
+       transform="matrix(-0.84116615,-0.8558268,0.8511054,-0.84594302,24,-16.729351)"
+       inkscape:label="X-1" />
+  </g>
+</svg>
