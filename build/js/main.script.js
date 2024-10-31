@@ -3194,7 +3194,10 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
       var $elements_children_collapsible_navbars = once('dcpl_navbar_toggle', children_collapsible_navbars);
       $elements_children_collapsible_navbars.forEach(function (ele) {
         ele.addEventListener('shown.bs.collapse', function (event) {
-          document.querySelector('body').classList.toggle('noscroll');
+          document.querySelector('body').classList.add('noscroll');
+        });
+        ele.addEventListener('hide.bs.collapse', function (event) {
+          document.querySelector('body').classList.remove('noscroll');
         });
       });
       var children_elements_to_once = context.querySelectorAll('.sbf-mark-highlight');

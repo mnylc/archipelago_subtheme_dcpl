@@ -32,7 +32,10 @@ import Popover from 'bootstrap/js/dist/popover';
       const $elements_children_collapsible_navbars = once('dcpl_navbar_toggle', children_collapsible_navbars);
       $elements_children_collapsible_navbars.forEach(function (ele) {
         ele.addEventListener('shown.bs.collapse', event => {
-          document.querySelector('body').classList.toggle('noscroll');
+          document.querySelector('body').classList.add('noscroll');
+        })
+        ele.addEventListener('hide.bs.collapse', event => {
+          document.querySelector('body').classList.remove('noscroll');
         })
       });
 

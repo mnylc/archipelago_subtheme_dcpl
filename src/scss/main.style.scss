@@ -68,3 +68,11 @@ body {
     background-color: $white-light;
   }
 }
+
+.btn-primary {
+  @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($blue, 25%), $white);
+}
+
+.btn-outline-primary {
+  @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($primary, 25%), $white);
+}

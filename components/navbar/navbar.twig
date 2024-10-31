@@ -44,7 +44,7 @@
   {% set nav_attributes = nav_attributes.setAttribute('data-bs-theme', navbar_theme) %}
 {% endif %}
 
-<nav {{ nav_attributes.addClass(nav_classes) }}>
+<nav {{ nav_attributes.addClass(nav_classes).setAttribute('id','main-nav-bar') }}>
   <div {{ navbar_container_attributes.addClass(navbar_container_classes) }}>
     {% block branding %}
       {{ branding }}
@@ -83,6 +83,10 @@
           height="4.1811848"
           x="5.3519173"
           y="20.303135" />
+            <polygon class="svg-icon-handle"
+                   id="handle"
+                      points="2,0 6,2 14,40 0,40"
+             />
     <rect class="svg-icon-vertical3"
           id="vertical3"
           width="37.296165"
@@ -104,7 +108,7 @@
 </svg>
         </span>
       </button>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#search-nav" aria-controls="navbar-collapse-search" aria-expanded="false" aria-label="Toggle Search">
+      <button class="navbar-toggler collapsed ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#search-nav" aria-controls="navbar-collapse-search" aria-expanded="false" aria-label="Toggle Search">
         <span class="navbar-toggler-icon"></span>
       </button>
     {% endblock %}

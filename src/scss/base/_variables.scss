@@ -28,16 +28,26 @@ $white: rgb(250,248,247);
 $white-light:rgb(252,251,252);
 $body-bg: $white !default;
 $blue: rgb(27,79,136);
-$body-color: $gray-800 !default;;
+$body-color: $gray-800 !default;
 
-$theme-colors: (primary: $primary, secondary: $secondary, tertiary: $tertiary, quaternary:$quaternary, light: $gray-200, dark: $gray-800);
+$dropdown-link-color:   $blue;
+$dropdown-link-hover-color:  $white;
+$dropdown-link-hover-bg: $blue;
+
+
+$theme-colors: (primary: $primary, secondary: $secondary, tertiary: $tertiary, quaternary:$quaternary, light: $white, dark: tint-color($quaternary, 80%));
 $navbar-dark-color: rgba($gray-200, 1);
 $navbar-dark-hover-color: rgba($gray-200, .75);
+$body-emphasis-color: $primary;
+
 $border-radius: 0.275rem;
 $border-radius-lg: 0.275rem;
+
 $btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;
+$btn-link-color: $white;
+
 $navbar-brand-padding-y: 0;
 $headings-color: rgba($black, 1);
 $font-family-sans-serif: "Inter", sans-serif;
@@ -46,18 +56,38 @@ $headings-font-family: "Poppins", sans-serif;
 $btn-font-family: "Poppins", sans-serif;
 $font-weight-base: 400 !default;
 $link-color:                              $blue !default;
-$link-decoration:                         nnull !default;
-$link-shade-percentage:                   10% !default;
+$link-decoration:                         null !default;
+$link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
 $navbar-light-toggler-icon-bg: initial;
 $navbar-toggler-padding-y: 0;
 $navbar-toggler-padding-x: 0;
+
+
+
 .navbar-toggler {
   width: 3rem;
   height: 3rem;
 }
 .archipelago-subtheme-dcpl {
+
+  /* Mirador */
+  .MuiAppBar-positionAbsolute {
+   /* z-index: 800 !important; we can't override bc Stupid Mirador uses IDs to target. Default 1100 */
+  }
+  .toolbar-oriented .toolbar-bar {
+    // We have to override the Toolbar if present instead. Drupal uses 502
+    z-index: 1200;
+  }
+
+  @media (min-width: 1400px) {
+    /* We do this because we have an off canvas that turns into a column on XXL displays */
+    .col-xxl-3.navbar-expand-xxl .offcanvas {
+      width: 100% !important;
+    }
+  }
+
   .navbar-toggler-icon {
     display: flex;
     vertical-align: middle;
@@ -71,7 +101,8 @@ $navbar-toggler-padding-x: 0;
     width:auto;
     height:auto;
     svg {
-      rect {
+      rect,polygon {
+        transition: transform 300ms;
         stroke-width: 15.8114;
         stroke-linecap: round;
         stroke-linejoin: bevel;
@@ -81,19 +112,65 @@ $navbar-toggler-padding-x: 0;
     }
 
     svg .svg-icon-step4 {
-      fill: $secondary;
+      fill: $primary;
     }
 
     svg .svg-icon-step3 {
-      fill: $secondary;
+      fill: $primary;
     }
 
     svg .svg-icon-step2 {
-      fill: $secondary;
+      fill: $primary;
     }
 
     svg .svg-icon-step1 {
-      fill: $secondary;
+      fill: $primary;
+    }
+  }
+  button.navbar-toggler.collapsed {
+    &:hover {
+      /*
+      svg .svg-icon-step4 {
+        fill: $quaternary;
+        transform: translate(0px, 1px) rotate(-2deg) scale(0.975,1);
+      }
+      svg .svg-icon-step1 {
+        fill: $quaternary;
+        transform: translate(2px, 6px) rotate(-4deg) scale(0.95,0.9);
+      }
+      svg .svg-icon-step2 {
+        fill: $quaternary;
+        transform: translate(4px, 8px) rotate(-5deg) scale(0.9,0.85);
+      }
+      svg .svg-icon-step3 {
+        fill: $quaternary;
+        transform: translate(7px, 10px) rotate(-7deg) scale(0.85,0.80);
+      }*/
+      svg .svg-icon-step4 {
+        fill: $secondary;
+        transform: translate(0px, -4px) rotate(2.5deg) scale(1.05,1.07);
+      }
+      svg .svg-icon-step1 {
+        fill: tint-color($secondary, 10%);
+        transform: translate(3px, 5px) rotate(0deg) scale(0.92,0.92);
+      }
+      svg .svg-icon-step2 {
+        fill: tint-color($secondary, 22%);
+        transform: translate(7px, 10px) rotate(-2.5deg) scale(0.81,0.85);
+      }
+      svg .svg-icon-vertical1 {
+        fill: tint-color($secondary, 35%);
+        transform: translate(11px, 11px) rotate(-4deg) scale(0.71,0.72);
+      }
+      svg .svg-icon-step3 {
+        fill: tint-color($secondary, 50%);
+        transform: translate(15px, 11px) rotate(-6.5deg) scale(0.62,0.6);
+      }
+      svg .svg-icon-handle {
+        fill: tint-color($black, 45%);
+        transform: translate(15px, 7px) rotate(50deg) ;
+      }
+
     }
   }
 }
@@ -107,15 +184,15 @@ $navbar-toggler-padding-x: 0;
   width: 1px;
 }
 
-.btn-primary,.btn-secondary {
+/*.btn-primary,.btn-secondary {
   a {
-    color: $navbar-dark-color;
+    color: $white;
     &hover {
-      color: $navbar-dark-hover-color;
+      color: $white-light;
     }
   }
 }
-
+*/
 
 a {
   font-family: "Poppins", sans-serif;
@@ -273,7 +350,8 @@ mark {
 }
 
 .page-wrapper .sticky-top {
-  z-index:501;
+  /* on less than the Drupal toolbar */
+  z-index:1199;
   top: var(--drupal-displace-offset-top, 0);
 }
 

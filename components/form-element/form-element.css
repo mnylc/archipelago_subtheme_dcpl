@@ -19,6 +19,23 @@
   height: 3rem;
 }
 
+.archipelago-subtheme-dcpl {
+  /* Mirador */
+}
+.archipelago-subtheme-dcpl .MuiAppBar-positionAbsolute {
+  /* z-index: 800 !important; we can't override bc Stupid Mirador uses IDs to target. Default 1100 */
+}
+.archipelago-subtheme-dcpl .toolbar-oriented .toolbar-bar {
+  z-index: 1200;
+}
+@media (min-width: 1400px) {
+  .archipelago-subtheme-dcpl {
+    /* We do this because we have an off canvas that turns into a column on XXL displays */
+  }
+  .archipelago-subtheme-dcpl .col-xxl-3.navbar-expand-xxl .offcanvas {
+    width: 100% !important;
+  }
+}
 .archipelago-subtheme-dcpl .navbar-toggler-icon {
   display: flex;
   vertical-align: middle;
@@ -32,7 +49,8 @@
   width: auto;
   height: auto;
 }
-.archipelago-subtheme-dcpl .navbar-toggler-icon svg rect {
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg rect, .archipelago-subtheme-dcpl .navbar-toggler-icon svg polygon {
+  transition: transform 300ms;
   stroke-width: 15.8114;
   stroke-linecap: round;
   stroke-linejoin: bevel;
@@ -40,16 +58,59 @@
   fill: transparent;
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step4 {
-  fill: rgb(215, 172, 123);
+  fill: rgb(211, 101, 58);
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step3 {
-  fill: rgb(215, 172, 123);
+  fill: rgb(211, 101, 58);
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step2 {
-  fill: rgb(215, 172, 123);
+  fill: rgb(211, 101, 58);
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step1 {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover {
+  /*
+  svg .svg-icon-step4 {
+    fill: $quaternary;
+    transform: translate(0px, 1px) rotate(-2deg) scale(0.975,1);
+  }
+  svg .svg-icon-step1 {
+    fill: $quaternary;
+    transform: translate(2px, 6px) rotate(-4deg) scale(0.95,0.9);
+  }
+  svg .svg-icon-step2 {
+    fill: $quaternary;
+    transform: translate(4px, 8px) rotate(-5deg) scale(0.9,0.85);
+  }
+  svg .svg-icon-step3 {
+    fill: $quaternary;
+    transform: translate(7px, 10px) rotate(-7deg) scale(0.85,0.80);
+  }*/
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-step4 {
   fill: rgb(215, 172, 123);
+  transform: translate(0px, -4px) rotate(2.5deg) scale(1.05, 1.07);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-step1 {
+  fill: #dbb488;
+  transform: translate(3px, 5px) rotate(0deg) scale(0.92, 0.92);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-step2 {
+  fill: #e0be98;
+  transform: translate(7px, 10px) rotate(-2.5deg) scale(0.81, 0.85);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-vertical1 {
+  fill: #e5c9a9;
+  transform: translate(11px, 11px) rotate(-4deg) scale(0.71, 0.72);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-step3 {
+  fill: #ebd6bd;
+  transform: translate(15px, 11px) rotate(-6.5deg) scale(0.62, 0.6);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-handle {
+  fill: #8a8d98;
+  transform: translate(15px, 7px) rotate(50deg);
 }
 
 .visually-hidden, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label {
@@ -62,13 +123,15 @@
   width: 1px;
 }
 
-.btn-primary a, .btn-secondary a {
-  color: #9d9d9f;
+/*.btn-primary,.btn-secondary {
+  a {
+    color: $white;
+    &hover {
+      color: $white-light;
+    }
+  }
 }
-.btn-primary ahover, .btn-secondary ahover {
-  color: rgba(157, 157, 159, 0.75);
-}
-
+*/
 a {
   font-family: "Poppins", sans-serif;
 }
@@ -200,7 +263,8 @@ mark {
 }
 
 .page-wrapper .sticky-top {
-  z-index: 501;
+  /* on less than the Drupal toolbar */
+  z-index: 1199;
   top: var(--drupal-displace-offset-top, 0);
 }
 
