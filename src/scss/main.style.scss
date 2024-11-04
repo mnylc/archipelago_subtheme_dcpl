@@ -78,11 +78,16 @@ body {
 .back-to-top {
   transition: height .25s, background-color .5s, bottom .25s;
 }
+#sidebar-first-content {
+  transition: top .5s;
+  top: 8rem;
+}
 body.scrolled {
   /* Extras */
-  #offcanvas-toggler-container {
-
-    z-index: 1234;
+  #sidebar-first-content {
+    top:calc(var(--drupal-displace-offset-top, 0) + 7rem)
+  }
+  #offcanvas-toggler-container-wrapper {
     button {
       position:relative;
       background-color: $white;

@@ -12748,13 +12748,18 @@ body.scrolled {
   transition: height 0.25s, background-color 0.5s, bottom 0.25s;
 }
 
+#sidebar-first-content {
+  transition: top 0.5s;
+  top: 8rem;
+}
+
 body.scrolled {
   /* Extras */
 }
-body.scrolled #offcanvas-toggler-container {
-  z-index: 1234;
+body.scrolled #sidebar-first-content {
+  top: calc(var(--drupal-displace-offset-top, 0) + 7rem);
 }
-body.scrolled #offcanvas-toggler-container button {
+body.scrolled #offcanvas-toggler-container-wrapper button {
   position: relative;
   background-color: rgb(250, 248, 247);
 }
