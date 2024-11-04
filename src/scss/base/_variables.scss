@@ -33,7 +33,9 @@ $body-color: $gray-800 !default;
 $dropdown-link-color:   $blue;
 $dropdown-link-hover-color:  $white;
 $dropdown-link-hover-bg: $blue;
-
+$spacer: 1rem;
+$zindex-offcanvas: 1199; /* one less than Drupal toolbar */
+$offcanvas-padding-y: calc(var(--drupal-displace-offset-top, 0px) + #{$spacer});
 
 $theme-colors: (primary: $primary, secondary: $secondary, tertiary: $tertiary, quaternary:$quaternary, light: $white, dark: tint-color($quaternary, 80%));
 $navbar-dark-color: rgba($gray-200, 1);
@@ -81,6 +83,12 @@ $navbar-toggler-padding-x: 0;
     z-index: 1200;
   }
 
+  .offcanvas {
+    &.show, &.showing {
+      padding-top: $offcanvas-padding-y;
+    }
+  }
+
   @media (min-width: 1400px) {
     /* We do this because we have an off canvas that turns into a column on XXL displays */
     .col-xxl-3.navbar-expand-xxl .offcanvas {
@@ -111,6 +119,7 @@ $navbar-toggler-padding-x: 0;
       }
     }
 
+    /* main menu */
     svg .svg-icon-step4 {
       fill: $primary;
     }
@@ -126,6 +135,36 @@ $navbar-toggler-padding-x: 0;
     svg .svg-icon-step1 {
       fill: $primary;
     }
+    /* filter menu */
+
+    svg .svg-slider-top {
+      fill: $primary;
+    }
+    svg .svg-slider-center {
+      fill: $primary;
+    }
+    svg .svg-slider-bottom {
+      fill: $primary;
+    }
+    svg .svg-slider-handle-bottom {
+      fill: $primary;
+    }
+    svg .svg-slider-handle-center {
+      fill: $primary;
+    }
+    svg .svg-slider-handle-top {
+      fill: $primary;
+    }
+
+    svg .svg-cut-1 {
+      fill: $white;
+    }
+    svg .svg-cut-2 {
+      fill: $white;
+    }
+
+    /* search menu */
+
   }
   button.navbar-toggler.collapsed {
     &:hover {
@@ -350,8 +389,8 @@ mark {
 }
 
 .page-wrapper .sticky-top {
-  /* on less than the Drupal toolbar */
-  z-index:1199;
+  /* two less than the Drupal toolbar */
+  z-index:1198;
   top: var(--drupal-displace-offset-top, 0);
 }
 

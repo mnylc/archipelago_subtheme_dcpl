@@ -15,14 +15,19 @@
 body.noscroll {
   overflow: hidden;
 }
+
+
+
 .page {
+  nav.main-nav-bar {
+    min-height: 10rem;
+  }
   nav {
     .collapsing {
       transition: none;
       position:absolute;
       display: none;
     }
-    min-height: 10rem;
     .navbar-collapse.collapse {
       transition: background-color linear 1s;
       background-color: $white;
@@ -68,6 +73,53 @@ body {
     background-color: $white-light;
   }
 }
+
+
+.back-to-top {
+  transition: height .25s, background-color .5s, bottom .25s;
+}
+body.scrolled {
+  /* Extras */
+  #offcanvas-toggler-container {
+
+    z-index: 1234;
+    button {
+      position:relative;
+      background-color: $white;
+    }
+  }
+  .back-to-top {
+    display: block;
+    width: 4rem;
+    height: 3rem;
+    position: fixed;
+    right: 5%;
+    bottom: 2%;
+    z-index: 1234;
+    background-color: $primary;
+    color: white;
+    padding-top: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+body:not(.scrolled) {
+  .back-to-top {
+    position: fixed;
+    height: 3rem;
+    width: 4rem;
+    background-color: rgba(0,0,0,0);
+    color: rgba(0,0,0,0);
+    bottom: -3%;
+    right: 5%;
+    padding-top: 0.5em;
+    text-align: center;
+  }
+}
+
+
+
 
 .btn-primary {
   @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($blue, 25%), $white);

@@ -93,11 +93,121 @@
       </div>
     </div>#}
    {#  Start of side bar OFF canvas except on XXL displays #}
-    <nav class="page__content col-xxl-3 flex-xxl-column justify-content-xxl-start align-items-xxl-start col-md-12 order-md-0 order-first  navbar navbar-expand-xxl" id="sidebar-first-content">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasSideBar" aria-controls="navbarOffcanvasSideBar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <nav class="page__content col-xxl-3 flex-xxl-column sticky-top justify-content-xxl-start align-items-xxl-start col-md-12 order-md-0 order-first navbar navbar-expand-xxl" id="sidebar-first-content">
+      <div id="offcanvas-toggler-container-wrapper" class="d-flex ms-auto">
+      <div class="container d-flex m-1 align-items-end justify-content-end" id="offcanvas-toggler-container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasSideBar" aria-controls="navbarOffcanvasSideBar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              version="1.1"
+              id="icon-menu-expand"
+              inkscape:export-filename="menu-expand.svg"
+              inkscape:export-xdpi="96"
+              inkscape:export-ydpi="96"
+              inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+              sodipodi:docname="menu-filters.svg"
+              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+    id="namedview1"
+    pagecolor="#ffffff"
+    bordercolor="#000000"
+    borderopacity="0.25"
+    inkscape:showpageshadow="2"
+    inkscape:pageopacity="0.0"
+    inkscape:pagecheckerboard="0"
+    inkscape:deskcolor="#d1d1d1"
+    inkscape:zoom="5.6568542"
+    inkscape:cx="12.020815"
+    inkscape:cy="22.892582"
+    inkscape:window-width="1392"
+    inkscape:window-height="1212"
+    inkscape:window-x="431"
+    inkscape:window-y="61"
+    inkscape:window-maximized="0"
+    inkscape:current-layer="layer1" />
+  <defs
+    id="defs1" />
+    <rect
+      class="svg-slider-bottom"
+      id="svg-slider-bottom"
+      width="37.296165"
+      height="4.1811848"
+      x="5.3519173"
+      y="34.041809"
+      inkscape:label="slider-bottom" />
+    <rect
+      class="svg-slider-top"
+      id="svg-slider-top"
+      width="37.296165"
+      height="4.1811848"
+      x="5.3519173"
+      y="6.432056"
+      inkscape:label="slider-top" />
+    <rect
+      id="svg-cut-1"
+      class="svg-cut-1"
+      width="34.703831"
+      height="4.1811848"
+      x="5.3379798"
+      y="-17.818815"
+      transform="rotate(90)"
+      inkscape:label="cut-1" />
+    <rect
+      class="svg-slider-center"
+      id="slider-center"
+      width="37.296165"
+      height="4.1811848"
+      x="5.3519173"
+      y="20.236933"
+      inkscape:label="slider-center" />
+    <rect
+      class="svg-cut-2"
+      id="cut-2"
+      width="22.506239"
+      height="4.1811848"
+      x="10.818057"
+      y="-33.818817"
+      transform="rotate(90)"
+      inkscape:label="cut-2" />
+    <rect
+      class="svg-slider-handle-center"
+      id="svg-slider-handle-center"
+      width="10.13187"
+      height="4.1811848"
+      x="17.261589"
+      y="-29.818817"
+      transform="rotate(90)"
+      inkscape:label="slider-handle-center" />
+    <rect
+      class="svg-slider-handle-bottom"
+      id="svg-slider-handle-botto"
+      width="10.13187"
+      height="4.1811848"
+      x="31.066467"
+      y="-21.867477"
+      transform="rotate(90)"
+      inkscape:label="slider-handle-bottom" />
+    <rect
+      class="svg-slider-handle-top"
+      id="svg-slider-handle-top"
+      width="10.13187"
+      height="4.1811848"
+      x="3.4567132"
+      y="-21.732138"
+      transform="rotate(90)"
+      inkscape:label="slider-handle-top" />
+</svg>
+          </span>
         </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="navbarOffcanvasSideBar" aria-labelledby="navbarOffcanvasSideBar">
+      </div>
+      </div>
+      <div class="offcanvas offcanvas-end text-white bg-blue" tabindex="-1" id="navbarOffcanvasSideBar" aria-labelledby="navbarOffcanvasSideBar">
       <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
         {% block sidebar_first %}
           {{ page.sidebar_first }}
@@ -114,6 +224,10 @@
         {% endblock %}
       </div>
     </div>
+    <a href="#" class="back-to-top" rel="nofollow">
+      <i class="fas fa-chevron-up"></i>
+      <span class="sr-only">Back to top</span>
+    </a>
   {% endif %}
   </div>
 </main>

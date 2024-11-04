@@ -36,40 +36,25 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs1" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1">
     <rect
-       class="svg-icon-step4"
-       style="fill:#ff5555;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
-       id="step4"
+       class="svg-slider-bottom"
+       id="svg-slider-bottom"
        width="37.296165"
        height="4.1811848"
        x="5.3519173"
        y="34.041809"
        inkscape:label="slider-bottom" />
     <rect
-       class="svg-icon-step3"
-       style="fill:none;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
-       id="step3"
-       width="37.296165"
-       height="4.1811848"
-       x="5.3519173"
-       y="5.3205576" />
-    <rect
-       class="svg-icon-vertical1"
-       style="fill:#ff5555;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
-       id="vertical1"
+       class="svg-slider-top"
+       id="svg-slider-top"
        width="37.296165"
        height="4.1811848"
        x="5.3519173"
        y="6.432056"
        inkscape:label="slider-top" />
     <rect
-       class="svg-icon-vertical3"
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#f9f9f9;fill-opacity:1;stroke-width:15.252;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       id="vertical3"
+       id="svg-cut-1"
+       class="svg-cut-1"
        width="34.703831"
        height="4.1811848"
        x="5.3379798"
@@ -77,18 +62,16 @@
        transform="rotate(90)"
        inkscape:label="cut-1" />
     <rect
-       class="svg-icon-vertical2"
-       style="fill:#ff5555;stroke-width:15.8114;stroke-linecap:round;stroke-linejoin:bevel"
-       id="vertical2"
+       class="svg-slider-center"
+       id="slider-center"
        width="37.296165"
        height="4.1811848"
        x="5.3519173"
        y="20.236933"
        inkscape:label="slider-center" />
     <rect
-       class="svg-icon-vertical3"
-       style="font-variation-settings:normal;vector-effect:none;fill:#f9f9f9;fill-opacity:1;stroke-width:12.2826;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-       id="vertical3-3"
+       class="svg-cut-2"
+       id="cut-2"
        width="22.506239"
        height="4.1811848"
        x="10.818057"
@@ -96,9 +79,8 @@
        transform="rotate(90)"
        inkscape:label="cut-2" />
     <rect
-       class="svg-icon-vertical3"
-       style="font-variation-settings:normal;vector-effect:none;fill:#ff2a2a;fill-opacity:1;stroke-width:8.24107;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-       id="vertical3-3-2"
+       class="svg-slider-handle-center"
+       id="svg-slider-handle-center"
        width="10.13187"
        height="4.1811848"
        x="17.261589"
@@ -106,9 +88,8 @@
        transform="rotate(90)"
        inkscape:label="slider-handle-center" />
     <rect
-       class="svg-icon-vertical3"
-       style="font-variation-settings:normal;vector-effect:none;fill:#ff2a2a;fill-opacity:1;stroke-width:8.24107;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-       id="vertical3-3-2-4"
+       class="svg-slider-handle-bottom"
+       id="svg-slider-handle-botto"
        width="10.13187"
        height="4.1811848"
        x="31.066467"
@@ -116,14 +97,12 @@
        transform="rotate(90)"
        inkscape:label="slider-handle-bottom" />
     <rect
-       class="svg-icon-vertical3"
-       style="font-variation-settings:normal;vector-effect:none;fill:#ff2a2a;fill-opacity:1;stroke-width:8.24107;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-       id="vertical3-3-2-0"
+       class="svg-slider-handle-top"
+       id="svg-slider-handle-top"
        width="10.13187"
        height="4.1811848"
        x="3.4567132"
        y="-21.732138"
        transform="rotate(90)"
        inkscape:label="slider-handle-top" />
-  </g>
 </svg>

@@ -16,6 +16,7 @@
  * $body-bg: #000;
  * $body-color: $gray-100;
  */
+/* one less than Drupal toolbar */
 .navbar-toggler {
   width: 3rem;
   height: 3rem;
@@ -29,6 +30,9 @@
 }
 .archipelago-subtheme-dcpl .toolbar-oriented .toolbar-bar {
   z-index: 1200;
+}
+.archipelago-subtheme-dcpl .offcanvas.show, .archipelago-subtheme-dcpl .offcanvas.showing {
+  padding-top: calc(var(--drupal-displace-offset-top, 0px) + 1rem);
 }
 @media (min-width: 1400px) {
   .archipelago-subtheme-dcpl {
@@ -50,6 +54,9 @@
   align-items: center;
   width: auto;
   height: auto;
+  /* main menu */
+  /* filter menu */
+  /* search menu */
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg rect, .archipelago-subtheme-dcpl .navbar-toggler-icon svg polygon {
   transition: transform 300ms;
@@ -70,6 +77,30 @@
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step1 {
   fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-top {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-center {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-bottom {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-bottom {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-center {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-top {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-cut-1 {
+  fill: rgb(250, 248, 247);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-cut-2 {
+  fill: rgb(250, 248, 247);
 }
 .archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover {
   /*
@@ -265,8 +296,8 @@ mark, .mark {
 }
 
 .page-wrapper .sticky-top {
-  /* on less than the Drupal toolbar */
-  z-index: 1199;
+  /* two less than the Drupal toolbar */
+  z-index: 1198;
   top: var(--drupal-displace-offset-top, 0);
 }
 
@@ -446,6 +477,7 @@ mark, .mark {
  * $body-bg: #000;
  * $body-color: $gray-100;
  */
+/* one less than Drupal toolbar */
 .navbar-toggler {
   width: 3rem;
   height: 3rem;
@@ -459,6 +491,9 @@ mark, .mark {
 }
 .archipelago-subtheme-dcpl .toolbar-oriented .toolbar-bar {
   z-index: 1200;
+}
+.archipelago-subtheme-dcpl .offcanvas.show, .archipelago-subtheme-dcpl .offcanvas.showing {
+  padding-top: calc(var(--drupal-displace-offset-top, 0px) + 1rem);
 }
 @media (min-width: 1400px) {
   .archipelago-subtheme-dcpl {
@@ -480,6 +515,9 @@ mark, .mark {
   align-items: center;
   width: auto;
   height: auto;
+  /* main menu */
+  /* filter menu */
+  /* search menu */
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg rect, .archipelago-subtheme-dcpl .navbar-toggler-icon svg polygon {
   transition: transform 300ms;
@@ -500,6 +538,30 @@ mark, .mark {
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step1 {
   fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-top {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-center {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-bottom {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-bottom {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-center {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-top {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-cut-1 {
+  fill: rgb(250, 248, 247);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-cut-2 {
+  fill: rgb(250, 248, 247);
 }
 .archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover {
   /*
@@ -695,8 +757,8 @@ mark, .mark {
 }
 
 .page-wrapper .sticky-top {
-  /* on less than the Drupal toolbar */
-  z-index: 1199;
+  /* two less than the Drupal toolbar */
+  z-index: 1198;
   top: var(--drupal-displace-offset-top, 0);
 }
 
@@ -6988,11 +7050,11 @@ textarea.form-control-lg {
   }
 }
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
-  --bs-offcanvas-zindex: 1045;
+  --bs-offcanvas-zindex: 1199;
   --bs-offcanvas-width: 400px;
   --bs-offcanvas-height: 30vh;
   --bs-offcanvas-padding-x: 1rem;
-  --bs-offcanvas-padding-y: 1rem;
+  --bs-offcanvas-padding-y: calc(var(--drupal-displace-offset-top, 0px) + 1rem);
   --bs-offcanvas-color: var(--bs-body-color);
   --bs-offcanvas-bg: var(--bs-body-bg);
   --bs-offcanvas-border-width: var(--bs-border-width);
@@ -12631,7 +12693,7 @@ body.noscroll {
   overflow: hidden;
 }
 
-.page nav {
+.page nav.main-nav-bar {
   min-height: 10rem;
 }
 .page nav .collapsing {
@@ -12680,6 +12742,48 @@ body {
 }
 body.scrolled {
   background-color: rgb(252, 251, 252);
+}
+
+.back-to-top {
+  transition: height 0.25s, background-color 0.5s, bottom 0.25s;
+}
+
+body.scrolled {
+  /* Extras */
+}
+body.scrolled #offcanvas-toggler-container {
+  z-index: 1234;
+}
+body.scrolled #offcanvas-toggler-container button {
+  position: relative;
+  background-color: rgb(250, 248, 247);
+}
+body.scrolled .back-to-top {
+  display: block;
+  width: 4rem;
+  height: 3rem;
+  position: fixed;
+  right: 5%;
+  bottom: 2%;
+  z-index: 1234;
+  background-color: rgb(211, 101, 58);
+  color: white;
+  padding-top: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body:not(.scrolled) .back-to-top {
+  position: fixed;
+  height: 3rem;
+  width: 4rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  bottom: -3%;
+  right: 5%;
+  padding-top: 0.5em;
+  text-align: center;
 }
 
 .btn-primary {
