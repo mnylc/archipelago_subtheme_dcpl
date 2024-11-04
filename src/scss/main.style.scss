@@ -123,7 +123,16 @@ body:not(.scrolled) {
   }
 }
 
-
+@include media-breakpoint-down(xxl) {
+  /* Don't set sticky-top by default. Only set sticky if under XXL to avoid Facets competing for z-index in other sizes
+     with Top collapsing menu
+   */
+  #sidebar-first-content {
+    position:sticky;
+    top: 0;
+    z-index: 1199;
+  }
+}
 
 
 .btn-primary {

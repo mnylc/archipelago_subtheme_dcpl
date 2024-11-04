@@ -94,6 +94,9 @@ $navbar-toggler-padding-x: 0;
     .col-xxl-3.navbar-expand-xxl .offcanvas {
       width: 100% !important;
     }
+    #sidebar-first-content {
+      position: static !important;
+    }
   }
 
   .navbar-toggler-icon {
@@ -155,12 +158,26 @@ $navbar-toggler-padding-x: 0;
     svg .svg-slider-handle-top {
       fill: $primary;
     }
-
-    svg .svg-cut-1 {
-      fill: $white;
+    svg .svg-search-circle {
+      fill: none;
+      stroke: $primary;
+      stroke-width:4.5;
+      stroke-linecap:round;
+      stroke-linejoin:bevel;
+      stroke-dasharray:none;
+      stroke-opacity:1
     }
-    svg .svg-cut-2 {
-      fill: $white;
+    svg .svg-search-circle {
+      fill: none;
+      stroke: $primary;
+      stroke-width:4.5;
+      stroke-linecap:round;
+      stroke-linejoin:bevel;
+      stroke-dasharray:none;
+      stroke-opacity:1
+    }
+    svg .svg-search-handle {
+      fill:$primary;
     }
 
     /* search menu */

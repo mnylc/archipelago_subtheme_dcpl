@@ -41,6 +41,9 @@
   .archipelago-subtheme-dcpl .col-xxl-3.navbar-expand-xxl .offcanvas {
     width: 100% !important;
   }
+  .archipelago-subtheme-dcpl #sidebar-first-content {
+    position: static !important;
+  }
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon {
   display: flex;
@@ -96,11 +99,26 @@
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-top {
   fill: rgb(211, 101, 58);
 }
-.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-cut-1 {
-  fill: rgb(250, 248, 247);
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-circle {
+  fill: none;
+  stroke: rgb(211, 101, 58);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
 }
-.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-cut-2 {
-  fill: rgb(250, 248, 247);
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-circle {
+  fill: none;
+  stroke: rgb(211, 101, 58);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-handle {
+  fill: rgb(211, 101, 58);
 }
 .archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover {
   /*
@@ -502,6 +520,9 @@ mark, .mark {
   .archipelago-subtheme-dcpl .col-xxl-3.navbar-expand-xxl .offcanvas {
     width: 100% !important;
   }
+  .archipelago-subtheme-dcpl #sidebar-first-content {
+    position: static !important;
+  }
 }
 .archipelago-subtheme-dcpl .navbar-toggler-icon {
   display: flex;
@@ -557,11 +578,26 @@ mark, .mark {
 .archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-top {
   fill: rgb(211, 101, 58);
 }
-.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-cut-1 {
-  fill: rgb(250, 248, 247);
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-circle {
+  fill: none;
+  stroke: rgb(211, 101, 58);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
 }
-.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-cut-2 {
-  fill: rgb(250, 248, 247);
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-circle {
+  fill: none;
+  stroke: rgb(211, 101, 58);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-handle {
+  fill: rgb(211, 101, 58);
 }
 .archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover {
   /*
@@ -12791,6 +12827,16 @@ body:not(.scrolled) .back-to-top {
   text-align: center;
 }
 
+@media (max-width: 1399.98px) {
+  /* Don't set sticky-top by default. Only set sticky if under XXL to avoid Facets competing for z-index in other sizes
+     with Top collapsing menu
+   */
+  #sidebar-first-content {
+    position: sticky;
+    top: 0;
+    z-index: 1199;
+  }
+}
 .btn-primary {
   --bs-btn-color: rgb(250, 248, 247);
   --bs-btn-bg: rgb(211, 101, 58);
