@@ -163,3 +163,13 @@ body:not(.scrolled) {
     @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($primary, 25%), $white);
   }
 
+
+  /* webforms */
+.archipelago-subtheme-dcpl {
+  .js-form-item.js-webform-states-hidden,
+  .js-form-submit.js-webform-states-hidden,
+  .js-form-wrapper.js-webform-states-hidden,
+  .js-webform-text-format-hidden > .js-text-format-wrapper {
+    display: none !important;
+  }
+}
