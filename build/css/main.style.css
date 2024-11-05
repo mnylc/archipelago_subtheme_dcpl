@@ -12926,4 +12926,12 @@ body:not(.scrolled) .back-to-top {
   --bs-btn-disabled-border-color: #b24f28;
 }
 
+/* webforms */
+.archipelago-subtheme-dcpl .js-form-item.js-webform-states-hidden,
+.archipelago-subtheme-dcpl .js-form-submit.js-webform-states-hidden,
+.archipelago-subtheme-dcpl .js-form-wrapper.js-webform-states-hidden,
+.archipelago-subtheme-dcpl .js-webform-text-format-hidden > .js-text-format-wrapper {
+  display: none !important;
+}
+
 /*# sourceMappingURL=main.style.css.map*/
