@@ -44,29 +44,19 @@ body.noscroll {
       }
       .container {
         position: relative;
-        left: calc(0px + var(--drupal-displace-offset-left));
-
+        // Offsets in case Drupal Menu is present
+        left: calc(0px + var(--drupal-displace-offset-left, 0px));
+        padding-right: calc((var(--bs-gutter-x) * 0.5) + var(--drupal-displace-offset-left));
         li.nav-item {
           font-size: $h4-font-size;
         }
       }
     }
     .offcanvas-top.show {
-      /*position: fixed;
-      display: block;
-      overflow-y: hidden;
-      z-index: -99;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0; */
       background-color: $blue ;
       .nav.navbar-nav {
         .container {
           position: relative;
-          left: calc(0px + var(--drupal-displace-offset-left, 0px));
           color: $white;
           li.nav-item {
             font-size: $h4-font-size;
@@ -146,6 +136,8 @@ body:not(.scrolled) {
   }
 }
 
+
+/* Form */
 
 .btn-primary {
   @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($blue, 25%), $white);

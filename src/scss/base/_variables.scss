@@ -22,7 +22,7 @@ $tertiary: rgb(136,	145,	137);
 $tertiary-rgb: 136,	145,	137;
 $quaternary: rgb(69,	28,	20);
 $gray-800: rgb(57,	62,	84	);
-$gray-200: rgb(157,	157,	159);
+$gray-200: rgb(144, 133, 120);
 $black: rgb(42,	48,	68);
 $white: rgb(250,248,247);
 $white-light:rgb(252,251,252);
@@ -43,6 +43,9 @@ $navbar-dark-color: rgba($gray-200, 1);
 $navbar-dark-hover-color: rgba($gray-200, .75);
 $body-emphasis-color: $primary;
 
+$input-btn-padding-y:         1rem !default;
+$input-btn-padding-x:         0.75rem !default;
+
 $btn-close-width:            1.5em !default;
 $btn-close-height:           $btn-close-width !default;
 $btn-close-padding-x:        .25em !default;
@@ -55,13 +58,13 @@ $btn-close-focus-opacity:    1 !default;
 $btn-close-disabled-opacity: .25 !default;
 $btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
 
-$border-radius: 0.275rem;
-$border-radius-lg: 0.275rem;
+$border-radius: 0.175rem;
+$border-radius-lg: 0.175rem;
 $offcanvas-vertical-height: 50vh;
 
-$btn-border-radius: 0;
+/*$btn-border-radius: 0;
 $btn-border-radius-sm: 0;
-$btn-border-radius-lg: 0;
+$btn-border-radius-lg: 0;*/
 $btn-link-color: $white;
 
 $navbar-brand-padding-y: 0;

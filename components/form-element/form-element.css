@@ -15,6 +15,9 @@
  * $body-color: $gray-100;
  */
 /* one less than Drupal toolbar */
+/*$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;*/
 .navbar-toggler {
   width: 3rem;
   height: 3rem;
