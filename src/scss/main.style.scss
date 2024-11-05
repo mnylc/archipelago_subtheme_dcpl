@@ -19,6 +19,13 @@ body.noscroll {
 
 
 .page {
+  .ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    z-index: 2000;
+  }
   #main-nav-bar {
     min-height: 10rem;
     padding-bottom: 2rem;
@@ -139,10 +146,20 @@ body:not(.scrolled) {
 
 /* Form */
 
-.btn-primary {
-  @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($blue, 25%), $white);
+
+.form-floating {
+  textarea.form-control {
+    min-height: calc(1.5em + 2rem + calc(var(--bs-border-width) * 2)) !important;
+    height:fit-content;
+  }
 }
 
-.btn-outline-primary {
-  @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($primary, 25%), $white);
-}
+
+  .btn-primary {
+    @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($blue, 25%), $white);
+  }
+
+  .btn-outline-primary {
+    @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($primary, 25%), $white);
+  }
+

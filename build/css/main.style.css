@@ -20,6 +20,10 @@
 /*$btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;*/
+.btn.btn-warning {
+  background-color: #ffc107;
+}
+
 .navbar-toggler {
   width: 3rem;
   height: 3rem;
@@ -27,9 +31,6 @@ $btn-border-radius-lg: 0;*/
 
 .archipelago-subtheme-dcpl {
   /* Mirador */
-}
-.archipelago-subtheme-dcpl .contextual-region {
-  z-index: 690;
 }
 .archipelago-subtheme-dcpl .MuiAppBar-positionAbsolute {
   /* z-index: 800 !important; we can't override bc Stupid Mirador uses IDs to target. Default 1100 */
@@ -170,7 +171,7 @@ $btn-border-radius-lg: 0;*/
   transform: translate(15px, 7px) rotate(50deg);
 }
 
-.visually-hidden, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label {
+.visually-hidden, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .views-exposed-form label {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -231,6 +232,17 @@ div[data-drupal-selector=edit-actions] {
        column-gap: 0;
   flex-flow: column;
   row-gap: 1rem;
+}
+
+.form-wrapper {
+  margin-bottom: 1rem;
+}
+.form-wrapper .form-item {
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  background-color: rgb(250, 248, 247);
 }
 
 .views-exposed-form.advanced-search-box .form-row {
@@ -510,6 +522,10 @@ mark, .mark {
 /*$btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;*/
+.btn.btn-warning {
+  background-color: #ffc107;
+}
+
 .navbar-toggler {
   width: 3rem;
   height: 3rem;
@@ -517,9 +533,6 @@ $btn-border-radius-lg: 0;*/
 
 .archipelago-subtheme-dcpl {
   /* Mirador */
-}
-.archipelago-subtheme-dcpl .contextual-region {
-  z-index: 690;
 }
 .archipelago-subtheme-dcpl .MuiAppBar-positionAbsolute {
   /* z-index: 800 !important; we can't override bc Stupid Mirador uses IDs to target. Default 1100 */
@@ -660,7 +673,7 @@ $btn-border-radius-lg: 0;*/
   transform: translate(15px, 7px) rotate(50deg);
 }
 
-.visually-hidden, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label {
+.visually-hidden, .views-exposed-form label, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -721,6 +734,17 @@ div[data-drupal-selector=edit-actions] {
        column-gap: 0;
   flex-flow: column;
   row-gap: 1rem;
+}
+
+.form-wrapper {
+  margin-bottom: 1rem;
+}
+.form-wrapper .form-item {
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  background-color: rgb(250, 248, 247);
 }
 
 .views-exposed-form.advanced-search-box .form-row {
@@ -12721,7 +12745,7 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 
-.visually-hidden, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label,
+.visually-hidden, .views-exposed-form label, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label,
 .visually-hidden-focusable:not(:focus):not(:focus-within) {
   width: 1px !important;
   height: 1px !important;
@@ -12732,7 +12756,7 @@ textarea.form-control-lg {
   white-space: nowrap !important;
   border: 0 !important;
 }
-.visually-hidden:not(caption), .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label:not(caption), .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label:not(caption),
+.visually-hidden:not(caption), .views-exposed-form label:not(caption), .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label:not(caption), .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label:not(caption),
 .visually-hidden-focusable:not(:focus):not(:focus-within):not(caption) {
   position: absolute !important;
 }
@@ -12751,6 +12775,13 @@ body.noscroll {
   overflow: hidden;
 }
 
+.page .ui-autocomplete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: default;
+  z-index: 2000;
+}
 .page #main-nav-bar {
   min-height: 10rem;
   padding-bottom: 2rem;
@@ -12855,6 +12886,12 @@ body:not(.scrolled) .back-to-top {
   }
 }
 /* Form */
+.form-floating textarea.form-control {
+  min-height: calc(1.5em + 2rem + var(--bs-border-width) * 2) !important;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .btn-primary {
   --bs-btn-color: rgb(250, 248, 247);
   --bs-btn-bg: rgb(211, 101, 58);

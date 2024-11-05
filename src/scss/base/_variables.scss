@@ -29,6 +29,7 @@ $white-light:rgb(252,251,252);
 $body-bg: $white !default;
 $blue: rgb(27,79,136);
 $body-color: $gray-800 !default;
+$yellow:  #ffc107 !default;
 
 $dropdown-link-color:   $blue;
 $dropdown-link-hover-color:  $white;
@@ -84,7 +85,9 @@ $navbar-toggler-padding-y: 0;
 $navbar-toggler-padding-x: 0;
 
 
-
+.btn.btn-warning {
+  background-color: $yellow;
+}
 
 .navbar-toggler {
   width: 3rem;
@@ -92,7 +95,7 @@ $navbar-toggler-padding-x: 0;
 }
 .archipelago-subtheme-dcpl {
   .contextual-region {
-    z-index: calc($zindex-sticky - 500);
+    //z-index: calc($zindex-sticky - 500);
   }
 
   /* Mirador */
@@ -318,6 +321,22 @@ div[data-drupal-selector="edit-actions"] {
         row-gap: 1rem;
       }
     }
+}
+.views-exposed-form {
+  .form-group {
+  }
+  label {
+    @extend .visually-hidden !optional;
+  }
+}
+.form-wrapper {
+  margin-bottom: 1rem;
+  .form-item {
+    margin-bottom: 1rem;
+  }
+}
+fieldset {
+  background-color: $white;
 }
 
   .views-exposed-form.advanced-search-box {
