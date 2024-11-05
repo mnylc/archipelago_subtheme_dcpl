@@ -1,0 +1,13 @@
+{
+  "name": "mnylc/archipelago_subtheme_dcpl",
+  "description": "Archipelago Subtheme based on Radix 6+ for DCPL",
+  "type": "drupal-theme",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/radix"
+  },
+  "require": {
+      "drupal/radix":  "^6"
+  }
+}
