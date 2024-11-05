@@ -25,6 +25,9 @@
 .archipelago-subtheme-dcpl {
   /* Mirador */
 }
+.archipelago-subtheme-dcpl .contextual-region {
+  z-index: 690;
+}
 .archipelago-subtheme-dcpl .MuiAppBar-positionAbsolute {
   /* z-index: 800 !important; we can't override bc Stupid Mirador uses IDs to target. Default 1100 */
 }
@@ -314,9 +317,13 @@ mark, .mark {
 }
 
 .page-wrapper .sticky-top {
-  /* two less than the Drupal toolbar */
-  z-index: 1198;
-  top: var(--drupal-displace-offset-top, 0);
+  top: var(--drupal-displace-offset-top, 0rem);
+}
+
+.form-item label.form-required::after {
+  margin-inline: 0.15em;
+  content: "*";
+  color: var(--bs-form-invalid-color);
 }
 
 .view-filters {
@@ -324,6 +331,7 @@ mark, .mark {
   padding-bottom: 0.5rem;
 }
 
+/* Drupal overrides */
 #drupal-off-canvas-wrapper > div:not(.ui-resizable-handle, .ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)),
 #drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *)) {
   all: revert;
@@ -423,20 +431,20 @@ mark, .mark {
   margin: calc(var(--off-canvas-vertical-spacing-unit) / 2) 0;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper summary {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper summary {
   margin: 1rem 0.5rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper .fieldset, .archipelago-subtheme-nysa #drupal-off-canvas-wrapper fieldset {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper .fieldset, .archipelago-subtheme-dcpl #drupal-off-canvas-wrapper fieldset {
   border: none;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table {
   margin: 1rem 0;
   width: 100%;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper {
   --off-canvas-vertical-spacing-unit: 0.5rem;
   --off-canvas-padding: 0rem;
   --off-canvas-focus-outline-width: 2px;
@@ -444,11 +452,11 @@ mark, .mark {
   --off-canvas-first-cell-padding-start: 0.5rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table {
   --bs-table-bg: var(--off-canvas-background-color-dark);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper details {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper details {
   --off-canvas-padding: 1.25rem;
   --off-canvas-vertical-spacing-unit: 0.5rem;
   --off-canvas-details-border-width: 0;
@@ -456,11 +464,11 @@ mark, .mark {
   --off-canvas-details-summary-font-size: 0.875rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper tr {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper tr {
   border-bottom: none;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper th:first-child {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper th:first-child {
   --off-canvas-table-cell-padding: 2px;
   display: flex;
   align-items: center;
@@ -468,14 +476,14 @@ mark, .mark {
   gap: var(--off-canvas-table-cell-padding);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a:hover,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a:focus {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a:hover,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a:focus {
   color: var(--off-canvas-background-color-light);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper .table > :not(caption) > * > td {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper .table > :not(caption) > * > td {
   background-color: unset;
 }
 
@@ -503,6 +511,9 @@ mark, .mark {
 
 .archipelago-subtheme-dcpl {
   /* Mirador */
+}
+.archipelago-subtheme-dcpl .contextual-region {
+  z-index: 690;
 }
 .archipelago-subtheme-dcpl .MuiAppBar-positionAbsolute {
   /* z-index: 800 !important; we can't override bc Stupid Mirador uses IDs to target. Default 1100 */
@@ -793,9 +804,13 @@ mark, .mark {
 }
 
 .page-wrapper .sticky-top {
-  /* two less than the Drupal toolbar */
-  z-index: 1198;
-  top: var(--drupal-displace-offset-top, 0);
+  top: var(--drupal-displace-offset-top, 0rem);
+}
+
+.form-item label.form-required::after {
+  margin-inline: 0.15em;
+  content: "*";
+  color: var(--bs-form-invalid-color);
 }
 
 .view-filters {
@@ -803,6 +818,7 @@ mark, .mark {
   padding-bottom: 0.5rem;
 }
 
+/* Drupal overrides */
 #drupal-off-canvas-wrapper > div:not(.ui-resizable-handle, .ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)),
 #drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *)) {
   all: revert;
@@ -902,20 +918,20 @@ mark, .mark {
   margin: calc(var(--off-canvas-vertical-spacing-unit) / 2) 0;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper summary {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper summary {
   margin: 1rem 0.5rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper .fieldset, .archipelago-subtheme-nysa #drupal-off-canvas-wrapper fieldset {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper .fieldset, .archipelago-subtheme-dcpl #drupal-off-canvas-wrapper fieldset {
   border: none;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table {
   margin: 1rem 0;
   width: 100%;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper {
   --off-canvas-vertical-spacing-unit: 0.5rem;
   --off-canvas-padding: 0rem;
   --off-canvas-focus-outline-width: 2px;
@@ -923,11 +939,11 @@ mark, .mark {
   --off-canvas-first-cell-padding-start: 0.5rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table {
   --bs-table-bg: var(--off-canvas-background-color-dark);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper details {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper details {
   --off-canvas-padding: 1.25rem;
   --off-canvas-vertical-spacing-unit: 0.5rem;
   --off-canvas-details-border-width: 0;
@@ -935,11 +951,11 @@ mark, .mark {
   --off-canvas-details-summary-font-size: 0.875rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper tr {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper tr {
   border-bottom: none;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper th:first-child {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper th:first-child {
   --off-canvas-table-cell-padding: 2px;
   display: flex;
   align-items: center;
@@ -947,14 +963,14 @@ mark, .mark {
   gap: var(--off-canvas-table-cell-padding);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a:hover,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a:focus {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a:hover,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a:focus {
   color: var(--off-canvas-background-color-light);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper .table > :not(caption) > * > td {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper .table > :not(caption) > * > td {
   background-color: unset;
 }
 
@@ -6155,20 +6171,20 @@ textarea.form-control-lg {
 }
 
 .btn-close {
-  --bs-btn-close-color: rgb(42, 48, 68);
-  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgb%2842, 48, 68%29'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
-  --bs-btn-close-opacity: 0.5;
+  --bs-btn-close-color: rgb(211, 101, 58);
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgb%28211, 101, 58%29'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+  --bs-btn-close-opacity: 1;
   --bs-btn-close-hover-opacity: 0.75;
   --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(211, 101, 58, 0.25);
   --bs-btn-close-focus-opacity: 1;
   --bs-btn-close-disabled-opacity: 0.25;
   --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
   box-sizing: content-box;
-  width: 1em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
   padding: 0.25em 0.25em;
   color: var(--bs-btn-close-color);
-  background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
+  background: transparent var(--bs-btn-close-bg) center/1.5em auto no-repeat;
   border: 0;
   border-radius: 0.275rem;
   opacity: var(--bs-btn-close-opacity);
@@ -7088,7 +7104,7 @@ textarea.form-control-lg {
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
   --bs-offcanvas-zindex: 1199;
   --bs-offcanvas-width: 400px;
-  --bs-offcanvas-height: 30vh;
+  --bs-offcanvas-height: 50vh;
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: calc(var(--drupal-displace-offset-top, 0px) + 1rem);
   --bs-offcanvas-color: var(--bs-body-color);
@@ -12567,73 +12583,73 @@ textarea.form-control-lg {
 .sticky-top {
   position: sticky;
   top: 0;
-  z-index: 1020;
+  z-index: 1190;
 }
 
 .sticky-bottom {
   position: sticky;
   bottom: 0;
-  z-index: 1020;
+  z-index: 1190;
 }
 
 @media (min-width: 576px) {
   .sticky-sm-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
   .sticky-sm-bottom {
     position: sticky;
     bottom: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
 }
 @media (min-width: 768px) {
   .sticky-md-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
   .sticky-md-bottom {
     position: sticky;
     bottom: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
 }
 @media (min-width: 992px) {
   .sticky-lg-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
   .sticky-lg-bottom {
     position: sticky;
     bottom: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
 }
 @media (min-width: 1200px) {
   .sticky-xl-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
   .sticky-xl-bottom {
     position: sticky;
     bottom: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
 }
 @media (min-width: 1400px) {
   .sticky-xxl-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
   .sticky-xxl-bottom {
     position: sticky;
     bottom: 0;
-    z-index: 1020;
+    z-index: 1190;
   }
 }
 .ratio {
@@ -12729,8 +12745,9 @@ body.noscroll {
   overflow: hidden;
 }
 
-.page nav.main-nav-bar {
+.page #main-nav-bar {
   min-height: 10rem;
+  padding-bottom: 2rem;
 }
 .page nav .collapsing {
   transition: none;
@@ -12746,8 +12763,18 @@ body.noscroll {
   height: 100%;
   width: 100%;
 }
-.page nav .navbar-collapse.collapse.show {
-  position: fixed;
+.page nav .offcanvas-top.bg-blue {
+  color: rgb(250, 248, 247);
+}
+.page nav .offcanvas-top .container {
+  position: relative;
+  left: calc(0px + var(--drupal-displace-offset-left));
+}
+.page nav .offcanvas-top .container li.nav-item {
+  font-size: 1.5rem;
+}
+.page nav .offcanvas-top.show {
+  /*position: fixed;
   display: block;
   overflow-y: hidden;
   z-index: -99;
@@ -12756,19 +12783,15 @@ body.noscroll {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 0; */
   background-color: rgb(27, 79, 136);
 }
-.page nav .navbar-collapse.collapse.show .nav.navbar-nav {
+.page nav .offcanvas-top.show .nav.navbar-nav .container {
   position: relative;
-  left: calc(0px + var(--drupal-displace-offset-left));
-  width: 100%;
-  height: 100%;
+  left: calc(0px + var(--drupal-displace-offset-left, 0px));
   color: rgb(250, 248, 247);
-  padding-top: 20rem;
-  padding-bottom: 20rem;
 }
-.page nav .navbar-collapse.collapse.show .nav.navbar-nav li.nav-item {
+.page nav .offcanvas-top.show .nav.navbar-nav .container li.nav-item {
   font-size: 1.5rem;
 }
 
@@ -12785,19 +12808,12 @@ body.scrolled {
 }
 
 #sidebar-first-content {
-  transition: top 0.5s;
+  transition: top 0.3s;
   top: 8rem;
 }
 
 body.scrolled {
   /* Extras */
-}
-body.scrolled #sidebar-first-content {
-  top: calc(var(--drupal-displace-offset-top, 0) + 7rem);
-}
-body.scrolled #offcanvas-toggler-container-wrapper button {
-  position: relative;
-  background-color: rgb(250, 248, 247);
 }
 body.scrolled .back-to-top {
   display: block;
@@ -12813,6 +12829,12 @@ body.scrolled .back-to-top {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+}
+body.scrolled #sidebar-first-content {
+  top: calc(var(--drupal-displace-offset-top, 0rem) + 7rem);
+}
+body.scrolled #offcanvas-toggler-container-wrapper button {
+  background-color: rgb(250, 248, 247);
 }
 
 body:not(.scrolled) .back-to-top {
@@ -12833,8 +12855,7 @@ body:not(.scrolled) .back-to-top {
    */
   #sidebar-first-content {
     position: sticky;
-    top: 0;
-    z-index: 1199;
+    z-index: 1190;
   }
 }
 .btn-primary {

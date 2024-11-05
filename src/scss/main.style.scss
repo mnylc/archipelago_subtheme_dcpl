@@ -19,8 +19,9 @@ body.noscroll {
 
 
 .page {
-  nav.main-nav-bar {
+  #main-nav-bar {
     min-height: 10rem;
+    padding-bottom: 2rem;
   }
   nav {
     .collapsing {
@@ -37,8 +38,21 @@ body.noscroll {
         width:100%;
       }
     }
-    .navbar-collapse.collapse.show {
-      position: fixed;
+    .offcanvas-top {
+      &.bg-blue {
+        color: $white;
+      }
+      .container {
+        position: relative;
+        left: calc(0px + var(--drupal-displace-offset-left));
+
+        li.nav-item {
+          font-size: $h4-font-size;
+        }
+      }
+    }
+    .offcanvas-top.show {
+      /*position: fixed;
       display: block;
       overflow-y: hidden;
       z-index: -99;
@@ -47,18 +61,16 @@ body.noscroll {
       top: 0;
       right: 0;
       bottom: 0;
-      left: 0;
+      left: 0; */
       background-color: $blue ;
       .nav.navbar-nav {
-        position: relative;
-        left: calc(0px + var(--drupal-displace-offset-left));
-        width:100%;
-        height:100%;
-        color: $white;
-        padding-top: 20rem;
-        padding-bottom: 20rem;
-        li.nav-item {
-          font-size: $h4-font-size;
+        .container {
+          position: relative;
+          left: calc(0px + var(--drupal-displace-offset-left, 0px));
+          color: $white;
+          li.nav-item {
+            font-size: $h4-font-size;
+          }
         }
       }
     }
@@ -79,20 +91,12 @@ body {
   transition: height .25s, background-color .5s, bottom .25s;
 }
 #sidebar-first-content {
-  transition: top .5s;
+  transition: top .3s;
   top: 8rem;
 }
 body.scrolled {
   /* Extras */
-  #sidebar-first-content {
-    top:calc(var(--drupal-displace-offset-top, 0) + 7rem)
-  }
-  #offcanvas-toggler-container-wrapper {
-    button {
-      position:relative;
-      background-color: $white;
-    }
-  }
+
   .back-to-top {
     display: block;
     width: 4rem;
@@ -107,6 +111,15 @@ body.scrolled {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+  }
+  #sidebar-first-content {
+    top:calc(var(--drupal-displace-offset-top, 0rem) + 7rem)
+  }
+  #offcanvas-toggler-container-wrapper {
+    button {
+      //position:relative;
+      background-color: $white;
+    }
   }
 }
 body:not(.scrolled) {
@@ -129,8 +142,7 @@ body:not(.scrolled) {
    */
   #sidebar-first-content {
     position:sticky;
-    top: 0;
-    z-index: 1199;
+    z-index: 1190;
   }
 }
 

@@ -93,12 +93,12 @@
       </div>
     </div>#}
    {#  Start of side bar OFF canvas except on XXL displays #}
-    <nav class="page__content col-xxl-3 flex-xxl-column justify-content-xxl-start align-items-xxl-start col-md-12 order-md-0 order-first navbar navbar-expand-xxl" id="sidebar-first-content">
+    <div class="page__content col-xxl-3 flex-xxl-column justify-content-xxl-start align-items-xxl-start col-md-12 order-md-0 order-first navbar navbar-expand-xxl" id="sidebar-first-content">
       <div id="offcanvas-toggler-container-wrapper" class="d-flex ms-auto">
-      <div class="container d-flex m-1 align-items-end justify-content-end" id="offcanvas-toggler-container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasSideBar" aria-controls="navbarOffcanvasSideBar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">
-            <svg
+        <div class="container d-flex align-items-end justify-content-end" id="offcanvas-toggler-container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasSideBar" aria-controls="navbarOffcanvasSideBar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <svg
               width="48"
               height="48"
               viewBox="0 0 48 48"
@@ -111,24 +111,21 @@
       width="37.296165"
       height="4.1811848"
       x="5.3519173"
-      y="34.041809"
-      inkscape:label="slider-bottom" />
+      y="34.041809"/>
     <rect
       class="svg-slider-top"
       id="svg-slider-top"
       width="37.296165"
       height="4.1811848"
       x="5.3519173"
-      y="6.432056"
-      inkscape:label="slider-top" />
+      y="6.432056"/>
     <rect
       class="svg-slider-center"
       id="slider-center"
       width="37.296165"
       height="4.1811848"
       x="5.3519173"
-      y="20.236933"
-      inkscape:label="slider-center" />
+      y="20.236933"/>
     <rect
       class="svg-slider-handle-center"
       id="svg-slider-handle-center"
@@ -136,8 +133,7 @@
       height="4.1811848"
       x="17.261589"
       y="-29.818817"
-      transform="rotate(90)"
-      inkscape:label="slider-handle-center" />
+      transform="rotate(90)"/>
     <rect
       class="svg-slider-handle-bottom"
       id="svg-slider-handle-botto"
@@ -145,8 +141,7 @@
       height="4.1811848"
       x="31.066467"
       y="-21.867477"
-      transform="rotate(90)"
-      inkscape:label="slider-handle-bottom" />
+      transform="rotate(90)"/>
     <rect
       class="svg-slider-handle-top"
       id="svg-slider-handle-top"
@@ -154,21 +149,26 @@
       height="4.1811848"
       x="3.4567132"
       y="-21.732138"
-      transform="rotate(90)"
-      inkscape:label="slider-handle-top" />
+      transform="rotate(90)"/>
 </svg>
           </span>
         </button>
       </div>
       </div>
       <div class="offcanvas offcanvas-end text-white bg-blue" tabindex="-1" id="navbarOffcanvasSideBar" aria-labelledby="navbarOffcanvasSideBar">
+        <div class="offcanvas-header">
+          {% block sidebar_first_header %}
+            {{ page.sidebar_first_header }}
+          {% endblock %}
+          <button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
       <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
         {% block sidebar_first %}
           {{ page.sidebar_first }}
         {% endblock %}
       </div>
       </div>
-    </nav>
+    </div>
   {% endif %}
 	{% if page.content %}
     <div class="page__content col" id="main-content">

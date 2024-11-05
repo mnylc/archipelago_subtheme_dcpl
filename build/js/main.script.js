@@ -3190,14 +3190,18 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
         }
         position = scroll;
       });
-      var children_collapsible_navbars = context.querySelectorAll('.navbar-collapse');
+      var children_collapsible_navbars = context.querySelectorAll('#main-nav-bar .offcanvas');
       var $elements_children_collapsible_navbars = once('dcpl_navbar_toggle', children_collapsible_navbars);
       $elements_children_collapsible_navbars.forEach(function (ele) {
-        ele.addEventListener('shown.bs.collapse', function (event) {
+        ele.addEventListener('show.bs.offcanvas', function (event) {
+          document.getElementById('offcanvas-toggler-container').classList.toggle('visually-hidden');
+        });
+        ele.addEventListener('shown.bs.offcanvas', function (event) {
           document.querySelector('body').classList.add('noscroll');
         });
-        ele.addEventListener('hide.bs.collapse', function (event) {
+        ele.addEventListener('hide.bs.offcanvas', function (event) {
           document.querySelector('body').classList.remove('noscroll');
+          document.getElementById('offcanvas-toggler-container').classList.toggle('visually-hidden');
         });
       });
       var children_elements_to_once = context.querySelectorAll('.sbf-mark-highlight');

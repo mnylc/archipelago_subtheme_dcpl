@@ -28,14 +28,19 @@ import Popover from 'bootstrap/js/dist/popover';
         }
         position = scroll;
       });
-      const children_collapsible_navbars = context.querySelectorAll('.navbar-collapse');
+      const children_collapsible_navbars = context.querySelectorAll('#main-nav-bar .offcanvas');
       const $elements_children_collapsible_navbars = once('dcpl_navbar_toggle', children_collapsible_navbars);
       $elements_children_collapsible_navbars.forEach(function (ele) {
-        ele.addEventListener('shown.bs.collapse', event => {
+        ele.addEventListener('show.bs.offcanvas', event => {
+          document.getElementById( 'offcanvas-toggler-container').classList.toggle('visually-hidden');
+        })
+
+        ele.addEventListener('shown.bs.offcanvas', event => {
           document.querySelector('body').classList.add('noscroll');
         })
-        ele.addEventListener('hide.bs.collapse', event => {
+        ele.addEventListener('hide.bs.offcanvas', event => {
           document.querySelector('body').classList.remove('noscroll');
+          document.getElementById( 'offcanvas-toggler-container').classList.toggle('visually-hidden');
         })
       });
 

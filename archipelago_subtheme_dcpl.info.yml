@@ -19,7 +19,8 @@ regions:
   navbar_right: 'Navbar right'
   navbar_bottom: 'Navbar Bottom'
   header: Header
-  sidebar_first: 'Sidebar First'
+  sidebar_first_header: 'Sidebar First Header (Off canvas)'
+  sidebar_first: 'Sidebar First (Off canvas)'
   content: Content
   page_bottom: 'Page bottom'
   footer: Footer

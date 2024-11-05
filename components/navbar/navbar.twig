@@ -50,7 +50,7 @@
       {{ branding }}
     {% endblock %}
     {% block navbar_toggler %}
-      <button class="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menu-nav" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-nav" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
           <svg
             width="48"
@@ -108,7 +108,7 @@
 </svg>
         </span>
       </button>
-      <button class="navbar-toggler collapsed ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#search-nav" aria-controls="navbar-collapse-search" aria-expanded="false" aria-label="Toggle Search">
+      <button class="navbar-toggler collapsed ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#search-nav" aria-controls="navbar-collapse-search" aria-expanded="false" aria-label="Toggle Search">
         <span class="navbar-toggler-icon">
           <svg
             width="48"
@@ -157,8 +157,9 @@
         </span>
       </button>
     {% endblock %}
-    <div id="menu-nav" class="collapse navbar-collapse align-self-start align-self-lg-center justify-content-between">
+    <div id="menu-nav" class="offcanvas offcanvas-top bg-blue {# collapse navbar-collapse #} align-self-start justify-content-between">
       <div class="container">
+        <div class="offcanvas-header"><button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
       {% block left %}
         {{ left }}
       {% endblock %}
@@ -167,8 +168,9 @@
       {% endblock %}
       </div>
     </div>
-    <div id="search-nav" class="collapse navbar-collapse align-items-center align-self-start align-self-lg-center">
+    <div id="search-nav" class="offcanvas offcanvas-top bg-white align-items-center align-self-start">
       <div class="container">
+        <div class="offcanvas-header"><button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
       {% block bottom %}
         {{ bottom }}
       {% endblock %}

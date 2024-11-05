@@ -35,6 +35,7 @@ $dropdown-link-hover-color:  $white;
 $dropdown-link-hover-bg: $blue;
 $spacer: 1rem;
 $zindex-offcanvas: 1199; /* one less than Drupal toolbar */
+$zindex-sticky: 1190;
 $offcanvas-padding-y: calc(var(--drupal-displace-offset-top, 0px) + #{$spacer});
 
 $theme-colors: (primary: $primary, secondary: $secondary, tertiary: $tertiary, quaternary:$quaternary, light: $white, dark: tint-color($quaternary, 80%));
@@ -42,8 +43,21 @@ $navbar-dark-color: rgba($gray-200, 1);
 $navbar-dark-hover-color: rgba($gray-200, .75);
 $body-emphasis-color: $primary;
 
+$btn-close-width:            1.5em !default;
+$btn-close-height:           $btn-close-width !default;
+$btn-close-padding-x:        .25em !default;
+$btn-close-padding-y:        $btn-close-padding-x !default;
+$btn-close-color:            $primary !default;
+$btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
+$btn-close-opacity:          1 !default;
+$btn-close-hover-opacity:    .75 !default;
+$btn-close-focus-opacity:    1 !default;
+$btn-close-disabled-opacity: .25 !default;
+$btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
+
 $border-radius: 0.275rem;
 $border-radius-lg: 0.275rem;
+$offcanvas-vertical-height: 50vh;
 
 $btn-border-radius: 0;
 $btn-border-radius-sm: 0;
@@ -68,11 +82,15 @@ $navbar-toggler-padding-x: 0;
 
 
 
+
 .navbar-toggler {
   width: 3rem;
   height: 3rem;
 }
 .archipelago-subtheme-dcpl {
+  .contextual-region {
+    z-index: calc($zindex-sticky - 500);
+  }
 
   /* Mirador */
   .MuiAppBar-positionAbsolute {
@@ -406,9 +424,13 @@ mark {
 }
 
 .page-wrapper .sticky-top {
-  /* two less than the Drupal toolbar */
-  z-index:1198;
-  top: var(--drupal-displace-offset-top, 0);
+  top: var(--drupal-displace-offset-top, 0rem);
+}
+
+.form-item label.form-required::after {
+  margin-inline: 0.15em;
+  content: "*";
+  color: var(--bs-form-invalid-color);
 }
 
 .view-filters {
@@ -416,7 +438,7 @@ mark {
   padding-bottom: 0.5rem;
 }
 
-
+/* Drupal overrides */
 #drupal-off-canvas-wrapper > div:not(.ui-resizable-handle,.ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)),
 #drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *))
 {
@@ -519,20 +541,20 @@ mark {
   margin: calc(var(--off-canvas-vertical-spacing-unit) /2) 0;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper summary {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper summary {
   margin: 1rem 0.5rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper .fieldset, .archipelago-subtheme-nysa #drupal-off-canvas-wrapper fieldset {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper .fieldset, .archipelago-subtheme-dcpl #drupal-off-canvas-wrapper fieldset {
   border:none;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table {
   margin: 1rem 0;
   width: 100%;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper {
   --off-canvas-vertical-spacing-unit: 0.5rem;
   --off-canvas-padding: 0rem;
   --off-canvas-focus-outline-width: 2px;
@@ -540,11 +562,11 @@ mark {
   --off-canvas-first-cell-padding-start: 0.5rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table {
   --bs-table-bg: var(--off-canvas-background-color-dark);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper details {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper details {
   --off-canvas-padding: 1.25rem;
   --off-canvas-vertical-spacing-unit: 0.5rem;
   --off-canvas-details-border-width: 0;
@@ -552,10 +574,10 @@ mark {
   --off-canvas-details-summary-font-size: 0.875rem;
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper tr {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper tr {
   border-bottom: none;
 }
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper th:first-child {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper th:first-child {
   --off-canvas-table-cell-padding: 2px;
   display: flex;
   align-items: center;
@@ -563,14 +585,14 @@ mark {
   gap: var(--off-canvas-table-cell-padding);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a:hover,
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper table tr th a:focus {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a:hover,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a:focus {
   color: var(--off-canvas-background-color-light);
 }
 
-.archipelago-subtheme-nysa #drupal-off-canvas-wrapper .table >:not(caption)>*>td {
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper .table >:not(caption)>*>td {
   background-color: unset;
 }
 
