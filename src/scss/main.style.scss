@@ -168,6 +168,9 @@ a.button{
   &.dialog-cancel {
     @extend .btn-warning;
   }
+  &.button--danger {
+    @extend .btn-warning;
+  }
 }
 div[data-drupal-selector="edit-actions"] {
   gap: 0.5rem !important;

@@ -20,7 +20,7 @@
 /*$btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;*/
-.btn.btn-warning, a.btn-warning.button, a.button.dialog-cancel {
+.btn.btn-warning, a.btn-warning.button, a.button.button--danger, a.button.dialog-cancel {
   background-color: #ffc107;
 }
 
@@ -520,7 +520,7 @@ mark, .mark {
 /*$btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;*/
-.btn.btn-warning, a.btn-warning.button, a.button.dialog-cancel {
+.btn.btn-warning, a.btn-warning.button, a.button.button--danger, a.button.dialog-cancel {
   background-color: #ffc107;
 }
 
