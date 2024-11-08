@@ -163,6 +163,16 @@ body:not(.scrolled) {
     @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($primary, 25%), $white);
   }
 
+a.button{
+  @extend .btn;
+  &.dialog-cancel {
+    @extend .btn-warning;
+  }
+}
+div[data-drupal-selector="edit-actions"] {
+  gap: 0.5rem !important;
+}
+
 
   /* webforms */
 .archipelago-subtheme-dcpl {
