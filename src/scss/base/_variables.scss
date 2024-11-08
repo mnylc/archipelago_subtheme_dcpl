@@ -83,10 +83,14 @@ $link-hover-decoration:                   null !default;
 $navbar-light-toggler-icon-bg: initial;
 $navbar-toggler-padding-y: 0;
 $navbar-toggler-padding-x: 0;
-
+$btn-danger-hover: shift-color($yellow, $link-shade-percentage) !default;
 
 .btn.btn-warning {
   background-color: $yellow;
+  &:hover {
+    --bs-btn-hover-bg: #{$btn-danger-hover};
+    --bs-btn-hover-color: #{$white};
+  }
 }
 
 .navbar-toggler {

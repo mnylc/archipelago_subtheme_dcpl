@@ -21,6 +21,10 @@ $btn-border-radius-lg: 0;*/
 .btn.btn-warning {
   background-color: #ffc107;
 }
+.btn.btn-warning:hover {
+  --bs-btn-hover-bg: #cc9a06;
+  --bs-btn-hover-color: rgb(250, 248, 247);
+}
 
 .navbar-toggler {
   width: 3rem;

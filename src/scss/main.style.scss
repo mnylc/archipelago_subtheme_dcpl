@@ -163,7 +163,7 @@ body:not(.scrolled) {
     @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($primary, 25%), $white);
   }
 
-a.button{
+a.button:not(.btn){
   @extend .btn;
   &.dialog-cancel {
     @extend .btn-warning;
