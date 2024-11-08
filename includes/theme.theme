@@ -8,4 +8,8 @@
 function archipelago_subtheme_dcpl_preprocess(&$variables)
 {
   $variables['#attached']['library'][] = 'archipelago_subtheme_dcpl/fontawesome';
+  if (in_array($variables['theme_hook_original'], ['links__dropbutton__operations', 'links__dropbutton'])) {
+    //Stupid Radix removes the first link and we can then no longer access it.
+    $variables['links_untouched'] = $variables['links'];
+  }
 }

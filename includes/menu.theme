@@ -10,9 +10,10 @@
  * Implements template_preprocess_links__dropbutton().
  */
 function archipelago_subtheme_dcpl_preprocess_links__dropbutton(&$variables) {
+  // Restore what Radix Broke.
+  $variables['links'] = $variables['links_untouched'] ?? $variables['links'];
   $links = &$variables['links'];
-
-  // Do nothing if we have no links.
+  // See \archipelago_subtheme_dcpl_preprocess
   if (!count($links)) {
     return;
   }
@@ -23,8 +24,7 @@ function archipelago_subtheme_dcpl_preprocess_links__dropbutton(&$variables) {
   /** @var \Drupal\Core\Url $url */
   $variables['split'] = FALSE;
   if (isset($link['link']) && ($url = $link['link']['#url'])) {
-    $button = $link['link'];
-
+    $button = $link;
     if ($variables['split'] = $url->getRouteName() !== '<nolink>') {
       $button['#options']['attributes']['class'][] = 'btn';
       $button['#options']['attributes']['class'][] = 'btn-outline-dark';
@@ -37,9 +37,8 @@ function archipelago_subtheme_dcpl_preprocess_links__dropbutton(&$variables) {
     }
   }
   elseif (isset($link['text'])) {
-    $button = $link['text'];
+    $button = $link;
     $variables['button'] = $button;
-
   }
 
   // Add required classes.
@@ -52,4 +51,5 @@ function archipelago_subtheme_dcpl_preprocess_links__dropbutton(&$variables) {
       $links[$key]['attributes']->addClass('dropdown-item');
     }
   }
+
 }
