@@ -10,4 +10,11 @@
  * @see template_preprocess_form()
  */
 #}
-{% include "radix:form" %}
+{% include "radix:form" with {
+   "form_utility_classes": [
+     'd-flex',
+     'gap-2',
+     'flex-column',
+  ]
+  }
+%}

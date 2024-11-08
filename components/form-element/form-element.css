@@ -294,8 +294,6 @@ fieldset {
 }
 
 .form-row > div, .form-row > fieldset {
-  padding-right: 0.3125rem;
-  padding-left: 0.3125rem;
   flex: 0 1 auto;
   width: auto;
   max-width: none;

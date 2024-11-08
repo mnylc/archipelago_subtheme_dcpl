@@ -31,4 +31,9 @@
  * @see template_preprocess_views_view_table()
  */
 #}
-{% include "radix:views-view--table" %}
+{% include "radix:views-view--table" with {
+  "views_view__table_utility_classes": [
+    'table-hover'
+  ],
+  "sticky":false
+}%}
