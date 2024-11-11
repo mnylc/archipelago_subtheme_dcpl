@@ -2,6 +2,9 @@
  * @file
  * Extends methods from core/misc/progress.js.
  * Credit to: Pierre Dureau (pdureau) for the initial code.
+ * This not only extends the core progress bar, but also adds a theme function
+ * to render the progress bar. This is useful for when you want to render a
+ * progress bar in a custom form or other custom element.
  */
 
 (($, Drupal) => {
@@ -15,18 +18,10 @@
    *   The HTML for the progress bar.
    */
   Drupal.theme.progressBar = (id) => {
-    // @todo use the pattern progress directly if possible in JS.
     return (
-      `<div class="progress-wrapper" aria-live="polite">` +
-      `<div class="progress__label"></div>` +
-      `<div id="${id}" class="progress" role="progressbar" aria-label="${Drupal.t(
+      `<div class="progress-wrapper" aria-live="polite"><div class="progress__label"></div><div id="${id}" class="progress"><div class="progress-bar-striped progress-bar-animated progress-bar" role="progressbar" aria-label="${Drupal.t(
         'Progress bar',
-      )}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">` +
-      `<div class="progress-bar-striped progress-bar">` +
-      `</div>` +
-      `</div>` +
-      `<div class="progress__description"></div>` +
-      `</div>`
+      )}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress__description"></div></div>`
     );
   };
 
@@ -51,17 +46,13 @@
             .each(function () {
               this.style.width = `${percentage}%`;
             });
-          $(this.element).find('.progress-bar:not(.progress-bar-animated)').addClass("progress-bar-animated");
-          $(this.element).find('.progress-bar').html(`${percentage}%`);
-          $(this.element).find('.progress').attr('aria-valuenow', percentage);
-        }
-        else {
-          $(this.element).find('.progress-bar').removeClass('progress-bar-animated');
+          $(this.element)
+            .find('.progress-bar')
+            .attr('aria-valuenow', percentage)
+            .html(`${percentage}%`);
         }
         if (message) {
-          // Remove the unnecessary whitespace at the end of the message.
           message = message.replace(/<br\/>&nbsp;|\s*$/, '');
-
           $('.progress__description', this.element).html(message);
         }
         if (label) {
@@ -79,16 +70,12 @@
        *   The error message. In a 'pre' tag.
        */
       displayError(string) {
-        // @todo use the pattern alert directly if possible in JS.
-        // @todo use the pattern button_close directly if possible in JS.
         const newError = $(
-          `<div class="alert-danger alert-dismissible fade show alert">` +
-            `<h4 class="alert-heading">${Drupal.t(
+          `<div class="alert-danger alert-dismissible fade show alert"><h4 class="alert-heading">${Drupal.t(
               'Error message',
             )}</h4>${string}<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="${Drupal.t(
               'Close',
-            )}"></button>` +
-            `</div>`,
+            )}"></button></div>`,
         );
         $(this.element).before(newError).hide();
 
