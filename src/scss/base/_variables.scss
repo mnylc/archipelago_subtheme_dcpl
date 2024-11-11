@@ -144,9 +144,14 @@ $btn-danger-hover: shift-color($yellow, $link-shade-percentage) !default;
     align-items: center;
     width:auto;
     height:auto;
+    &:hover {
+      rect,polygon {
+        transition-delay: 0.1s;
+      }
+    }
     svg {
       rect,polygon {
-        transition: transform 300ms;
+        transition: transform 300ms, fill 300ms, color 300ms;
         stroke-width: 15.8114;
         stroke-linecap: round;
         stroke-linejoin: bevel;
@@ -154,6 +159,7 @@ $btn-danger-hover: shift-color($yellow, $link-shade-percentage) !default;
         fill: transparent;
       }
     }
+
 
     /* main menu */
     svg .svg-icon-step4 {
