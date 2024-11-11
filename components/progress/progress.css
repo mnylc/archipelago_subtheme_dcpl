@@ -1,0 +1,504 @@
+/**
+ * Variables
+ * Variables should follow the $component-state-property-size formula for
+ * consistent naming. Examples:
+ * $nav-link-disabled-color
+ * $modal-content-box-shadow-xs
+ *
+ * Customization:
+ * To customize Bootstrap variables:
+ * Copy the desired variable from node_modules/bootstrap/scss/_variables.scss
+ * @see https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+ * Change the value and remove the !default flag.
+ * Examples:
+ * $body-bg: #000;
+ * $body-color: $gray-100;
+ */
+/* one less than Drupal toolbar */
+/*$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;*/
+.btn.btn-warning {
+  background-color: #ffc107;
+}
+.btn.btn-warning:hover {
+  --bs-btn-hover-bg: #cc9a06;
+  --bs-btn-hover-color: rgb(250, 248, 247);
+}
+
+.navbar-toggler {
+  width: 3rem;
+  height: 3rem;
+}
+
+.archipelago-subtheme-dcpl {
+  /* Mirador */
+}
+.archipelago-subtheme-dcpl .MuiAppBar-positionAbsolute {
+  /* z-index: 800 !important; we can't override bc Stupid Mirador uses IDs to target. Default 1100 */
+}
+.archipelago-subtheme-dcpl .toolbar-oriented .toolbar-bar {
+  z-index: 1200;
+}
+.archipelago-subtheme-dcpl .offcanvas.show, .archipelago-subtheme-dcpl .offcanvas.showing {
+  padding-top: calc(var(--drupal-displace-offset-top, 0px) + 1rem);
+}
+@media (min-width: 1400px) {
+  .archipelago-subtheme-dcpl {
+    /* We do this because we have an off canvas that turns into a column on XXL displays */
+  }
+  .archipelago-subtheme-dcpl .col-xxl-3.navbar-expand-xxl .offcanvas {
+    width: 100% !important;
+  }
+  .archipelago-subtheme-dcpl #sidebar-first-content {
+    position: static !important;
+  }
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon {
+  display: flex;
+  vertical-align: middle;
+  background-size: 100%;
+  background-image: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  /* main menu */
+  /* filter menu */
+  /* search menu */
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg rect, .archipelago-subtheme-dcpl .navbar-toggler-icon svg polygon {
+  transition: transform 300ms;
+  stroke-width: 15.8114;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  color: transparent;
+  fill: transparent;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step4 {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step3 {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step2 {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-icon-step1 {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-top {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-center {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-bottom {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-bottom {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-center {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-slider-handle-top {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-circle {
+  fill: none;
+  stroke: rgb(211, 101, 58);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-circle {
+  fill: none;
+  stroke: rgb(211, 101, 58);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+}
+.archipelago-subtheme-dcpl .navbar-toggler-icon svg .svg-search-handle {
+  fill: rgb(211, 101, 58);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover {
+  /*
+  svg .svg-icon-step4 {
+    fill: $quaternary;
+    transform: translate(0px, 1px) rotate(-2deg) scale(0.975,1);
+  }
+  svg .svg-icon-step1 {
+    fill: $quaternary;
+    transform: translate(2px, 6px) rotate(-4deg) scale(0.95,0.9);
+  }
+  svg .svg-icon-step2 {
+    fill: $quaternary;
+    transform: translate(4px, 8px) rotate(-5deg) scale(0.9,0.85);
+  }
+  svg .svg-icon-step3 {
+    fill: $quaternary;
+    transform: translate(7px, 10px) rotate(-7deg) scale(0.85,0.80);
+  }*/
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-step4 {
+  fill: rgb(215, 172, 123);
+  transform: translate(0px, -4px) rotate(2.5deg) scale(1.05, 1.07);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-step1 {
+  fill: #dbb488;
+  transform: translate(3px, 5px) rotate(0deg) scale(0.92, 0.92);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-step2 {
+  fill: #e0be98;
+  transform: translate(7px, 10px) rotate(-2.5deg) scale(0.81, 0.85);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-vertical1 {
+  fill: #e5c9a9;
+  transform: translate(11px, 11px) rotate(-4deg) scale(0.71, 0.72);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-step3 {
+  fill: #ebd6bd;
+  transform: translate(15px, 11px) rotate(-6.5deg) scale(0.62, 0.6);
+}
+.archipelago-subtheme-dcpl button.navbar-toggler.collapsed:hover svg .svg-icon-handle {
+  fill: #8a8d98;
+  transform: translate(15px, 7px) rotate(50deg);
+}
+
+.visually-hidden, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .views-exposed-form label {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*.btn-primary,.btn-secondary {
+  a {
+    color: $white;
+    &hover {
+      color: $white-light;
+    }
+  }
+}
+*/
+a {
+  font-family: "Poppins", sans-serif;
+}
+
+#main-content-wrapper {
+  min-height: calc(100vh - 300px);
+  height: auto !important;
+  margin: 0 auto -300px;
+}
+
+footer {
+  height: 300px;
+}
+
+#push-footer {
+  height: 300px;
+}
+
+.block-system-branding-block {
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+div[data-drupal-selector=edit-actions] {
+  align-items: end;
+  display: flex;
+}
+
+/* advanced search */
+.advanced-search-box .views-exposed-form .form-row .fieldset-wrapper {
+  -moz-column-gap: 0;
+       column-gap: 0;
+  flex-flow: column;
+  row-gap: 1rem;
+}
+
+/* advanced search as exposed modal*/
+.views-exposed-form.advanced-search-box .form-row .fieldset-wrapper {
+  -moz-column-gap: 0;
+       column-gap: 0;
+  flex-flow: column;
+  row-gap: 1rem;
+}
+
+.form-wrapper {
+  margin-bottom: 1rem;
+}
+.form-wrapper .form-item {
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  background-color: rgb(250, 248, 247);
+}
+
+.views-exposed-form.advanced-search-box .form-row {
+  min-height: 0;
+  width: 100%;
+  flex-flow: column;
+}
+.views-exposed-form.advanced-search-box .form-row fieldset {
+  min-height: 0;
+  flex-direction: column !important;
+}
+.views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper > div {
+  display: flex;
+  align-items: end;
+}
+.views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper .js-form-item {
+  display: flex;
+  flex-grow: 1;
+}
+
+.advanced-search-box .views-exposed-form .form-row {
+  min-height: 0;
+  width: 100%;
+  flex-flow: column;
+}
+.advanced-search-box .views-exposed-form .form-row fieldset {
+  min-height: 0;
+  flex-direction: column !important;
+}
+.advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper > div {
+  display: flex;
+  align-items: end;
+}
+.advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper .js-form-item {
+  display: flex;
+  flex-grow: 1;
+}
+
+.advanced-search-box .form-actions.mb-3 {
+  margin-top: 1rem;
+}
+
+.form-row > div, .form-row > fieldset {
+  flex: 0 1 auto;
+  width: auto;
+  max-width: none;
+}
+
+.form-row .form-actions {
+  align-self: flex-end;
+}
+
+#main-content .form-modal {
+  margin-bottom: 0.5rem;
+}
+
+.d-flex.hidden {
+  display: none !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+strong {
+  background-color: var(--bs-yellow);
+}
+
+.views-field-search-api-excerpt strong {
+  margin-right: 0.25rem;
+}
+
+mark {
+  background-color: var(--bs-yellow);
+}
+
+.page-wrapper .sticky-top {
+  top: var(--drupal-displace-offset-top, 0rem);
+}
+
+.form-item label.form-required::after {
+  margin-inline: 0.15em;
+  content: "*";
+  color: var(--bs-form-invalid-color);
+}
+
+.view-filters {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Drupal overrides */
+#drupal-off-canvas-wrapper > div:not(.ui-resizable-handle, .ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)),
+#drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *)) {
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+#drupal-off-canvas-wrapper > div:not(.ui-resizable-handle, .ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)):after,
+#drupal-off-canvas-wrapper > div:not(.ui-resizable-handle, .ui-dialog-titlebar) *:where(:not(details *, [data-drupal-messages] *, svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)):before,
+#drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *)):before,
+#drupal-off-canvas-wrapper *:where(.ui-dialog-titlebar *:not(svg, svg *)):after {
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Set base styles for the off-canvas dialog.
+ * @internal
+
+
+#drupal-off-canvas-wrapper *:where(:not(svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)) {
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+#drupal-off-canvas-wrapper *:where(:not(svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)):after,
+#drupal-off-canvas-wrapper *:where(:not(svg, svg *, .ck-reset *, [data-drupal-ck-style-fence] *, .ui-resizable-handle)):before {
+  all: revert;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+*/
+#drupal-off-canvas-wrapper *:not(details) a,
+#drupal-off-canvas-wrapper *:not(details) .link {
+  text-decoration: none;
+  color: var(--off-canvas-link-color);
+}
+
+#drupal-off-canvas-wrapper *:not(details) hr {
+  height: 1px;
+  background: var(--off-canvas-border-color);
+}
+
+#drupal-off-canvas-wrapper *:not(details) h1,
+#drupal-off-canvas-wrapper .heading-a {
+  font-size: 1.4375rem;
+  line-height: 1.2;
+}
+
+#drupal-off-canvas-wrapper *:not(details) h2,
+#drupal-off-canvas-wrapper .heading-b {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+  font-size: 1.1875rem;
+}
+
+#drupal-off-canvas-wrapper *:not(details) h3,
+#drupal-off-canvas-wrapper .heading-c {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+  /* font-size: 1.0625rem; */
+}
+
+#drupal-off-canvas-wrapper *:not(details) h4,
+#drupal-off-canvas-wrapper .heading-d {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+  font-size: 1rem;
+}
+
+#drupal-off-canvas-wrapper *:not(details) h5,
+#drupal-off-canvas-wrapper .heading-e,
+#drupal-off-canvas-wrapper *:not(details) h6,
+#drupal-off-canvas-wrapper .heading-f {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+  font-size: 0.9375rem;
+}
+
+#drupal-off-canvas-wrapper *:not(details) p {
+  margin: var(--off-canvas-vertical-spacing-unit) 0;
+}
+
+#drupal-off-canvas-wrapper *:not(details) img {
+  max-width: 100%;
+  height: auto;
+}
+
+#drupal-off-canvas-wrapper *:not(details) .links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#drupal-off-canvas-wrapper *:not(details) .links li {
+  margin: calc(var(--off-canvas-vertical-spacing-unit) / 2) 0;
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper summary {
+  margin: 1rem 0.5rem;
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper .fieldset, .archipelago-subtheme-dcpl #drupal-off-canvas-wrapper fieldset {
+  border: none;
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper {
+  --off-canvas-vertical-spacing-unit: 0.5rem;
+  --off-canvas-padding: 0rem;
+  --off-canvas-focus-outline-width: 2px;
+  padding: 0 var(--off-canvas-padding) var(--off-canvas-padding);
+  --off-canvas-first-cell-padding-start: 0.5rem;
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table {
+  --bs-table-bg: var(--off-canvas-background-color-dark);
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper details {
+  --off-canvas-padding: 1.25rem;
+  --off-canvas-vertical-spacing-unit: 0.5rem;
+  --off-canvas-details-border-width: 0;
+  --off-canvas-details-summary-padding: 0.625rem 1.25rem;
+  --off-canvas-details-summary-font-size: 0.875rem;
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper tr {
+  border-bottom: none;
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper th:first-child {
+  --off-canvas-table-cell-padding: 2px;
+  display: flex;
+  align-items: center;
+  min-height: 3.125rem;
+  gap: var(--off-canvas-table-cell-padding);
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a:hover,
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper table tr th a:focus {
+  color: var(--off-canvas-background-color-light);
+}
+
+.archipelago-subtheme-dcpl #drupal-off-canvas-wrapper .table > :not(caption) > * > td {
+  background-color: unset;
+}
+
+/*# sourceMappingURL=progress.css.map*/
