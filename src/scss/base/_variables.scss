@@ -111,12 +111,19 @@ $btn-danger-hover: shift-color($yellow, $link-shade-percentage) !default;
     z-index: 1200;
   }
 
+
   .offcanvas {
     &.show, &.showing {
       padding-top: $offcanvas-padding-y;
       overflow-y: scroll;
     }
+
+    .offcanvas-header .btn-close {
+      // Needs an override bc we are already giving the offcanvas an extra padding to please the drupal to bar
+      --bs-offcanvas-padding-y: 1rem;
+    }
   }
+
 
   #search-nav {
     --bs-offcanvas-height: 35vh
@@ -159,7 +166,6 @@ $btn-danger-hover: shift-color($yellow, $link-shade-percentage) !default;
         fill: transparent;
       }
     }
-
 
     /* main menu */
     svg .svg-icon-step4 {

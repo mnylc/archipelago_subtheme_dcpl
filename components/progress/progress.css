@@ -44,6 +44,9 @@ $btn-border-radius-lg: 0;*/
   padding-top: calc(var(--drupal-displace-offset-top, 0px) + 1rem);
   overflow-y: scroll;
 }
+.archipelago-subtheme-dcpl .offcanvas .offcanvas-header .btn-close {
+  --bs-offcanvas-padding-y: 1rem;
+}
 .archipelago-subtheme-dcpl #search-nav {
   --bs-offcanvas-height: 35vh ;
 }
