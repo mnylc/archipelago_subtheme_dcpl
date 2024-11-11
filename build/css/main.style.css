@@ -44,6 +44,10 @@ $btn-border-radius-lg: 0;*/
 }
 .archipelago-subtheme-dcpl .offcanvas.show, .archipelago-subtheme-dcpl .offcanvas.showing {
   padding-top: calc(var(--drupal-displace-offset-top, 0px) + 1rem);
+  overflow-y: scroll;
+}
+.archipelago-subtheme-dcpl #search-nav {
+  --bs-offcanvas-height: 35vh ;
 }
 @media (min-width: 1400px) {
   .archipelago-subtheme-dcpl {
@@ -548,6 +552,10 @@ $btn-border-radius-lg: 0;*/
 }
 .archipelago-subtheme-dcpl .offcanvas.show, .archipelago-subtheme-dcpl .offcanvas.showing {
   padding-top: calc(var(--drupal-displace-offset-top, 0px) + 1rem);
+  overflow-y: scroll;
+}
+.archipelago-subtheme-dcpl #search-nav {
+  --bs-offcanvas-height: 35vh ;
 }
 @media (min-width: 1400px) {
   .archipelago-subtheme-dcpl {

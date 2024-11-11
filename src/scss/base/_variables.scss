@@ -114,7 +114,12 @@ $btn-danger-hover: shift-color($yellow, $link-shade-percentage) !default;
   .offcanvas {
     &.show, &.showing {
       padding-top: $offcanvas-padding-y;
+      overflow-y: scroll;
     }
+  }
+
+  #search-nav {
+    --bs-offcanvas-height: 35vh
   }
 
   @media (min-width: 1400px) {
