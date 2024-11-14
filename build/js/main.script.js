@@ -3212,7 +3212,8 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
       $element_self.forEach(mark);
       function mark(element, index) {
         var $content_to_mark = element;
-        if (window.location.hash !== '') {
+        // a Slash will be an invalid HTML id but Mirador && Iabookreader will use it
+        if (window.location.hash !== '' && !window.location.hash.includes("/")) {
           var $targetAnchor = context.querySelector(window.location.hash);
           if ($targetAnchor && $content_to_mark) {
             if ($targetAnchor.type === "button") {
