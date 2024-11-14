@@ -3194,14 +3194,16 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
       var $elements_children_collapsible_navbars = once('dcpl_navbar_toggle', children_collapsible_navbars);
       $elements_children_collapsible_navbars.forEach(function (ele) {
         ele.addEventListener('show.bs.offcanvas', function (event) {
-          document.getElementById('offcanvas-toggler-container-wrapper').classList.toggle('invisible');
+          var _document$getElementB;
+          (_document$getElementB = document.getElementById('offcanvas-toggler-container-wrapper')) === null || _document$getElementB === void 0 || _document$getElementB.classList.toggle('invisible');
         });
         ele.addEventListener('shown.bs.offcanvas', function (event) {
           document.querySelector('body').classList.add('noscroll');
         });
         ele.addEventListener('hide.bs.offcanvas', function (event) {
+          var _document$getElementB2;
           document.querySelector('body').classList.remove('noscroll');
-          document.getElementById('offcanvas-toggler-container-wrapper').classList.toggle('invisible');
+          (_document$getElementB2 = document.getElementById('offcanvas-toggler-container-wrapper')) === null || _document$getElementB2 === void 0 || _document$getElementB2.classList.toggle('invisible');
         });
       });
       var children_elements_to_once = context.querySelectorAll('.sbf-mark-highlight');

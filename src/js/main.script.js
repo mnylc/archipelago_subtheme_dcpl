@@ -32,7 +32,7 @@ import Popover from 'bootstrap/js/dist/popover';
       const $elements_children_collapsible_navbars = once('dcpl_navbar_toggle', children_collapsible_navbars);
       $elements_children_collapsible_navbars.forEach(function (ele) {
         ele.addEventListener('show.bs.offcanvas', event => {
-          document.getElementById( 'offcanvas-toggler-container-wrapper').classList.toggle('invisible');
+          document.getElementById( 'offcanvas-toggler-container-wrapper')?.classList.toggle('invisible');
         })
 
         ele.addEventListener('shown.bs.offcanvas', event => {
@@ -40,7 +40,7 @@ import Popover from 'bootstrap/js/dist/popover';
         })
         ele.addEventListener('hide.bs.offcanvas', event => {
           document.querySelector('body').classList.remove('noscroll');
-          document.getElementById( 'offcanvas-toggler-container-wrapper').classList.toggle('invisible');
+          document.getElementById( 'offcanvas-toggler-container-wrapper')?.classList.toggle('invisible');
         })
       });
 
