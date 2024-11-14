@@ -18,6 +18,10 @@
 /*$btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;*/
+.pagination {
+  --bs-pagination-disabled-color: rgb(250, 248, 247);
+}
+
 .btn.btn-warning {
   background-color: #ffc107;
 }
@@ -351,8 +355,21 @@ mark {
   color: var(--bs-form-invalid-color);
 }
 
+/* general views */
 .view-filters {
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.view-content {
+  padding-bottom: 0.5rem;
+}
+
+.view-header {
+  padding-bottom: 0.5rem;
+}
+
+.view .pager {
   padding-bottom: 0.5rem;
 }
 
