@@ -362,15 +362,16 @@ mark {
 }
 
 .view-content {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .view-header {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .view .pager {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 /* Drupal overrides */
