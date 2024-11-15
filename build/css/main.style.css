@@ -12855,13 +12855,10 @@ body.noscroll {
   overflow: hidden;
 }
 
-.page .ui-autocomplete {
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: default;
-  z-index: 2000;
+.ui-autocomplete.ui-front {
+  z-index: 2000 !important;
 }
+
 .page #main-nav-bar {
   min-height: 10rem;
   padding-bottom: 2rem;
