@@ -6,7 +6,7 @@ props:
   type: object
   properties:
     caption:
-      type: [string, 'null']
+      type: [array, string, 'null']
       title: Caption
     colgroups:
       type: [array, 'null']
@@ -15,7 +15,7 @@ props:
       type: [array, 'null']
       title: Header
     rows:
-      type: array
+      type: [array, 'null']
       title: Body Rows
     footer:
       type: [array, string, 'null']
