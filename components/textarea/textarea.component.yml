@@ -4,14 +4,14 @@ status: experimental
 description: 'A themed component for a multiline form input control (textarea).'
 props:
   description: 'The properties accepted by the Textarea component.'
-  type: ['object', 'array']
+  type: object
   properties:
     attributes:
       description: 'HTML attributes assigned to the textarea element, represented as a Drupal Attribute object.'
       type: Drupal\Core\Template\Attribute
     value:
       description: 'The content of the textarea.'
-      type: string
+      type: ['string','array']
       title: 'Textarea Content'
     table_utility_classes:
       type: array
