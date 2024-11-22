@@ -18,6 +18,14 @@
 /*$btn-border-radius: 0;
 $btn-border-radius-sm: 0;
 $btn-border-radius-lg: 0;*/
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.title-wrap {
+  overflow-wrap: break-word;
+}
+
 .pagination {
   --bs-pagination-disabled-color: rgb(250, 248, 247);
 }

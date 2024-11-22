@@ -85,6 +85,12 @@ $navbar-toggler-padding-y: 0;
 $navbar-toggler-padding-x: 0;
 $btn-danger-hover: shift-color($yellow, $link-shade-percentage) !default;
 
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+.title-wrap {
+  overflow-wrap: break-word;
+}
 
 .pagination {
   --bs-pagination-disabled-color: #{$white};
