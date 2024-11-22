@@ -11,7 +11,7 @@ props:
       type: Drupal\Core\Template\Attribute
     value:
       description: 'The content of the textarea.'
-      type: string
+      type: ['object', 'array', 'string']
       title: 'Textarea Content'
     table_utility_classes:
       type: array
