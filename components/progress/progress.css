@@ -218,18 +218,27 @@ a {
   font-family: "Poppins", sans-serif;
 }
 
+.archipelago-subtheme-dcpl {
+  --footer-height: 300px;
+}
+
+@media (max-width: 992px) {
+  .archipelago-subtheme-dcpl {
+    --footer-height: 450px;
+  }
+}
 #main-content-wrapper {
-  min-height: calc(100vh - 300px);
+  min-height: calc(100vh - var(--footer-height));
   height: auto !important;
-  margin: 0 auto -300px;
+  margin: 0 auto calc(0px - var(--footer-height));
 }
 
 footer {
-  height: 300px;
+  height: var(--footer-height);
 }
 
 #push-footer {
-  height: 300px;
+  height: var(--footer-height);
 }
 
 .block-system-branding-block {
