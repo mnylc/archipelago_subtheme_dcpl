@@ -22,7 +22,7 @@ $tertiary: rgb(136,	145,	137);
 $tertiary-rgb: 136,	145,	137;
 $quaternary: rgb(69,	28,	20);
 $gray-800: rgb(57,	62,	84	);
-$gray-200: rgb(144, 133, 120);
+$brown: rgb(144, 133, 120);
 $black: rgb(42,	48,	68);
 $white: rgb(250,248,247);
 $white-light:rgb(252,251,252);
@@ -39,9 +39,10 @@ $zindex-offcanvas: 1199; /* one less than Drupal toolbar */
 $zindex-sticky: 1190;
 $offcanvas-padding-y: calc(var(--drupal-displace-offset-top, 0px) + #{$spacer});
 
+
 $theme-colors: (primary: $primary, secondary: $secondary, tertiary: $tertiary, quaternary:$quaternary, light: $white, dark: tint-color($quaternary, 80%));
-$navbar-dark-color: rgba($gray-200, 1);
-$navbar-dark-hover-color: rgba($gray-200, .75);
+$navbar-dark-color: rgba($brown, 1);
+$navbar-dark-hover-color: rgba($brown, .75);
 $body-emphasis-color: $primary;
 
 $input-btn-padding-y:         1rem !default;
@@ -92,8 +93,11 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.pagination {
-  --bs-pagination-disabled-color: #{$white};
+.archipelago-subtheme-dcpl {
+  .pagination {
+    --bs-pagination-disabled-color:var(--bs-gray-200);
+    --bs-pagination-disabled-bg: #{$white};
+  }
 }
 
 

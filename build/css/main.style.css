@@ -28,8 +28,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   overflow-wrap: break-word;
 }
 
-.pagination {
-  --bs-pagination-disabled-color: rgb(250, 248, 247);
+.archipelago-subtheme-dcpl .pagination {
+  --bs-pagination-disabled-color:var(--bs-gray-200);
+  --bs-pagination-disabled-bg: rgb(250, 248, 247);
 }
 
 .btn.btn-warning, a.btn-warning.button:not(.btn), a.button.button--danger:not(.btn):not(a.button:not(.btn)):not(a.button:not(.btn):not(a.button:not(.btn))), a.button.dialog-cancel:not(.btn):not(a.button:not(.btn)):not(a.button:not(.btn):not(a.button:not(.btn))) {
@@ -577,8 +578,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   overflow-wrap: break-word;
 }
 
-.pagination {
-  --bs-pagination-disabled-color: rgb(250, 248, 247);
+.archipelago-subtheme-dcpl .pagination {
+  --bs-pagination-disabled-color:var(--bs-gray-200);
+  --bs-pagination-disabled-bg: rgb(250, 248, 247);
 }
 
 .btn.btn-warning, a.btn-warning.button:not(.btn), a.button.button--danger:not(.btn):not(a.button:not(.btn)):not(a.button:not(.btn):not(a.button:not(.btn))), a.button.dialog-cancel:not(.btn):not(a.button:not(.btn)):not(a.button:not(.btn):not(a.button:not(.btn))) {
@@ -1115,7 +1117,7 @@ mark, .mark {
   --bs-gray: #6c757d;
   --bs-gray-dark: rgb(57, 62, 84);
   --bs-gray-100: #f8f9fa;
-  --bs-gray-200: rgb(144, 133, 120);
+  --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
   --bs-gray-400: #ced4da;
   --bs-gray-500: #adb5bd;
@@ -1157,7 +1159,7 @@ mark, .mark {
   --bs-info-border-subtle: #9eeaf9;
   --bs-warning-border-subtle: #ffe69c;
   --bs-danger-border-subtle: #f1aeb5;
-  --bs-light-border-subtle: rgb(144, 133, 120);
+  --bs-light-border-subtle: #e9ecef;
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 250, 248, 247;
   --bs-black-rgb: 42, 48, 68;
@@ -1176,8 +1178,8 @@ mark, .mark {
   --bs-emphasis-color-rgb: 211, 101, 58;
   --bs-secondary-color: rgba(57, 62, 84, 0.75);
   --bs-secondary-color-rgb: 57, 62, 84;
-  --bs-secondary-bg: rgb(144, 133, 120);
-  --bs-secondary-bg-rgb: 144, 133, 120;
+  --bs-secondary-bg: #e9ecef;
+  --bs-secondary-bg-rgb: 233, 236, 239;
   --bs-tertiary-color: rgba(57, 62, 84, 0.5);
   --bs-tertiary-color-rgb: 57, 62, 84;
   --bs-tertiary-bg: #f8f9fa;
