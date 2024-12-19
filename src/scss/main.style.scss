@@ -18,12 +18,28 @@ body.noscroll {
 .ui-autocomplete.ui-front {
   z-index: 2000 !important;
 }
+
+@media (max-width: 1440px) {
+  body.scrolled .page {
+    #main-nav-bar {
+      // make the nav bar a bit taller on scroll so the offset canvas toggler for the side bar looks on top
+      // but only if we have a side bar, so les than XXL.
+      min-height: 12rem;
+    }
+  }
+}
+
+
 .page {
 
   #main-nav-bar {
     min-height: 10rem;
     padding-bottom: 2rem;
   }
+
+
+
+
   nav {
     .collapsing {
       transition: none;
