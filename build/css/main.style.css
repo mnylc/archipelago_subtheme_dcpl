@@ -12932,6 +12932,10 @@ body.scrolled {
   top: 8rem;
 }
 
+#offcanvas-toggler-container {
+  pointer-events: all;
+}
+
 body.scrolled {
   /* Extras */
 }
@@ -12969,11 +12973,16 @@ body:not(.scrolled) .back-to-top {
   text-align: center;
 }
 
+#navbarOffcanvasSideBar {
+  pointer-events: all;
+}
+
 @media (max-width: 1399.98px) {
   /* Don't set sticky-top by default. Only set sticky if under XXL to avoid Facets competing for z-index in other sizes
      with Top collapsing menu
    */
   #sidebar-first-content {
+    pointer-events: none;
     position: sticky;
     z-index: 1190;
   }
