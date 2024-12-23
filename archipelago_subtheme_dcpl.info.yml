@@ -23,6 +23,7 @@ regions:
   sidebar_first_header: 'Sidebar First Header (Off canvas)'
   sidebar_first: 'Sidebar First (Off canvas)'
   content: Content
+  content_right: 'Content Right Sidebar 3 cols width (of 12)'
   page_bottom: 'Page bottom'
   footer: Footer
 libraries:

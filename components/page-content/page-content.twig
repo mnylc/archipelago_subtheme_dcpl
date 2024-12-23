@@ -178,11 +178,20 @@
         {% endblock %}
       </div>
     </div>
+  {% endif %}
+    {% if page.content_right %}
+      <div class="page__content col col-lg-3 order-lg-last order-first" id="main-content">
+        <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
+          {% block page_inner_content_right %}
+            {{ page.content_right }}
+          {% endblock %}
+        </div>
+      </div>
+    {% endif %}
     <a href="#" class="back-to-top" rel="nofollow">
       <i class="fas fa-chevron-up"></i>
       <span class="sr-only">Back to top</span>
     </a>
-  {% endif %}
   </div>
 </main>
 <div id="push-footer"></div>
