@@ -27,23 +27,31 @@ $black: rgb(42,	48,	68);
 $white: rgb(250,248,247);
 $white-light:rgb(252,251,252);
 $body-bg: $white !default;
-$blue: rgb(27,79,136);
+//$blue: rgb(27,79,136); really dark
+//$blue: rgb(57,	110,	177); lighter
+$blue: rgb(42,	99,	167);
 $body-color: $gray-800 !default;
 $yellow:  #ffc107 !default;
 
-$dropdown-link-color:   $blue;
+$dropdown-link-color: $blue;
 $dropdown-link-hover-color:  $white;
 $dropdown-link-hover-bg: $blue;
 $spacer: 1rem;
 $zindex-offcanvas: 1199; /* one less than Drupal toolbar */
 $zindex-sticky: 1190;
 $offcanvas-padding-y: calc(var(--drupal-displace-offset-top, 0px) + #{$spacer});
-
+$primary-emphasis: tint-color($primary, 20%);
 
 $theme-colors: (primary: $primary, secondary: $secondary, tertiary: $tertiary, quaternary:$quaternary, light: $white, dark: tint-color($quaternary, 80%));
 $navbar-dark-color: rgba($brown, 1);
 $navbar-dark-hover-color: rgba($brown, .75);
 $body-emphasis-color: $primary;
+
+//@see _accordion.scss
+$accordion-button-active-color: $white;
+$accordion-button-active-bg: $primary;
+
+
 
 $input-btn-padding-y:         1rem !default;
 $input-btn-padding-x:         0.75rem !default;
@@ -94,6 +102,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .archipelago-subtheme-dcpl {
+  // Override for any text marked as light over White background
+  .bg-blue {
+    .nav,navbar-nav {
+      --bs-nav-link-hover-color: #{$primary-emphasis};
+      --bs-emphasis-color-rgb: rgb(#{$white-light});
+      --bs-nav-link-color: #{$white};
+      .dropdown-menu {
+        --bs-dropdown-bg: transparent;
+        --bs-dropdown-link-color: #{$white};
+        --bs-dropdown-link-hover-color: #{$primary-emphasis};
+        --bs-dropdown-link-hover-bg: transparent;
+        --bs-dropdown-border-color: transparent;
+      }
+    }
+  }
+
   .pagination {
     --bs-pagination-disabled-color:var(--bs-gray-400);
     --bs-pagination-disabled-bg: #{$white};

@@ -158,20 +158,27 @@
     <div id="menu-nav" class="offcanvas offcanvas-top bg-blue {# collapse navbar-collapse #} align-self-start justify-content-between">
       <div class="container px-2 px-lg-0">
         <div class="offcanvas-header"><button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+        <div class="row">
       {% block left %}
         {{ left }}
       {% endblock %}
       {% block right %}
         {{ right }}
       {% endblock %}
+        </div>
       </div>
     </div>
     <div id="search-nav" class="offcanvas offcanvas-top bg-white align-items-center align-self-start">
       <div class="container px-2 px-lg-0">
         <div class="offcanvas-header"><button type="button" class="btn-close text-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+        <div class="row">
       {% block bottom %}
         {{ bottom }}
       {% endblock %}
+      {% block bottom_first_col %}
+        {{ bottom_first_col }}
+      {% endblock %}
+        </div>
       </div>
     </div>
   </div>

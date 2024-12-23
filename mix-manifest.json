@@ -1,12 +1,15 @@
 {
     "/build/js/main.script.js": "/build/js/main.script.js",
     "/build/css/main.style.css": "/build/css/main.style.css",
-    "/components/form-element/form-element.css": "/components/form-element/form-element.css",
+    "/components/form-element--radiocheckbox/form-element--radiocheckbox.css": "/components/form-element--radiocheckbox/form-element--radiocheckbox.css",
     "/components/form-element--label/form-element--label.css": "/components/form-element--label/form-element--label.css",
     "/components/dropdown-menu/dropdown-menu.css": "/components/dropdown-menu/dropdown-menu.css",
     "/components/details/details.css": "/components/details/details.css",
+    "/components/views-view/views-view.css": "/components/views-view/views-view.css",
+    "/components/textarea/textarea.css": "/components/textarea/textarea.css",
     "/components/table/table.css": "/components/table/table.css",
     "/components/progress/progress.css": "/components/progress/progress.css",
+    "/components/pagination/pagination.css": "/components/pagination/pagination.css",
     "/components/page/page.css": "/components/page/page.css",
     "/components/page-navigation/page-navigation.css": "/components/page-navigation/page-navigation.css",
     "/components/page-footer/page-footer.css": "/components/page-footer/page-footer.css",
@@ -15,5 +18,6 @@
     "/components/navbar-brand/navbar-brand.css": "/components/navbar-brand/navbar-brand.css",
     "/components/nav/nav.css": "/components/nav/nav.css",
     "/components/nav-item/nav-item.css": "/components/nav-item/nav-item.css",
-    "/components/html/html.css": "/components/html/html.css"
+    "/components/html/html.css": "/components/html/html.css",
+    "/components/form-element/form-element.css": "/components/form-element/form-element.css"
 }

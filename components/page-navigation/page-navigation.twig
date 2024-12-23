@@ -27,29 +27,35 @@
       {{ page.navbar_branding }}
     {% endif %}
   {% endblock %}
-
+  {# Collapsible Menus on Blue #}
   {% block left %}
     {% if page.navbar_left %}
-      <div class="me-auto">
+      <div class="me-auto col-lg col-12">
         {{ page.navbar_left }}
       </div>
     {% endif %}
   {% endblock %}
-
   {% block right %}
     {% if page.navbar_right %}
-      <div class="ms-auto">
+      <div class="ms-auto col-lg col-12">
         {{ page.navbar_right }}
       </div>
     {% endif %}
   {% endblock %}
+  {# Collapsible search #}
   {% block bottom %}
     {% if page.navbar_bottom %}
-      <div class="ms-auto">
+      <div class="ms-auto col-lg col-12">
         {{ page.navbar_bottom }}
       </div>
     {% endif %}
   {% endblock %}
+  {% block bottom_first_col %}
+    {% if page.navbar_bottom_first_col %}
+      <div class="ms-auto col-lg col-12">
+        {{ page.navbar_bottom_first_col }}
+      </div>
+    {% endif %}
+  {% endblock %}
 {% endembed %}
-
 {% endapply %}

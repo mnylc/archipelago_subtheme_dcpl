@@ -26,6 +26,18 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+.archipelago-subtheme-dcpl .bg-blue .nav, .archipelago-subtheme-dcpl .bg-blue navbar-nav {
+  --bs-nav-link-hover-color: #dc8461;
+  --bs-emphasis-color-rgb: rgb(rgb(252, 251, 252));
+  --bs-nav-link-color: rgb(250, 248, 247);
+}
+.archipelago-subtheme-dcpl .bg-blue .nav .dropdown-menu, .archipelago-subtheme-dcpl .bg-blue navbar-nav .dropdown-menu {
+  --bs-dropdown-bg: transparent;
+  --bs-dropdown-link-color: rgb(250, 248, 247);
+  --bs-dropdown-link-hover-color: #dc8461;
+  --bs-dropdown-link-hover-bg: transparent;
+  --bs-dropdown-border-color: transparent;
+}
 .archipelago-subtheme-dcpl .pagination {
   --bs-pagination-disabled-color:var(--bs-gray-400);
   --bs-pagination-disabled-bg: rgb(250, 248, 247);
