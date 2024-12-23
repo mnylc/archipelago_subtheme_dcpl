@@ -37,7 +37,7 @@
   {% endblock %}
   {% block right %}
     {% if page.navbar_right %}
-      <div class="ms-auto col-lg col-12">
+      <div class="ms-auto col-lg col-12 order-last">
         {{ page.navbar_right }}
       </div>
     {% endif %}
@@ -45,7 +45,7 @@
   {# Collapsible search #}
   {% block bottom %}
     {% if page.navbar_bottom %}
-      <div class="ms-auto col-lg col-12">
+      <div class="ms-auto col-lg col-12 order-last">
         {{ page.navbar_bottom }}
       </div>
     {% endif %}
