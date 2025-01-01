@@ -19,5 +19,9 @@
     "/components/nav/nav.css": "/components/nav/nav.css",
     "/components/nav-item/nav-item.css": "/components/nav-item/nav-item.css",
     "/components/html/html.css": "/components/html/html.css",
-    "/components/form-element/form-element.css": "/components/form-element/form-element.css"
+    "/components/form-element/form-element.css": "/components/form-element/form-element.css",
+    "/build/assets/images/mask-banner-1.png": "/build/assets/images/mask-banner-1.png",
+    "/build/assets/images/mask-banner-1.svg": "/build/assets/images/mask-banner-1.svg",
+    "/build/assets/images/mask-banner-2.png": "/build/assets/images/mask-banner-2.png",
+    "/build/assets/images/mask-banner-2.svg": "/build/assets/images/mask-banner-2.svg"
 }

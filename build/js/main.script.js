@@ -3385,6 +3385,24 @@ function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length)
         });
       }
       $(once('attache_observer', '.page-wrapper', context)).each(function (index, value) {
+        /* checking if something is visible */
+        console.log('attaching observers');
+        var inViewport = function inViewport(entries, observer) {
+          entries.forEach(function (entry) {
+            console.log(entry.intersectionRatio);
+            entry.target.classList.toggle("in-viewport-banner", entry.isIntersecting);
+          });
+        };
+        var Obs = new IntersectionObserver(inViewport);
+        var obsOptions = {
+          rootMargin: '-15% 0% -15% 0%'
+        }; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+        // Attach observer to every [data-inviewport] element:
+        document.querySelectorAll('.banner-animated').forEach(function (el) {
+          Obs.observe(el, obsOptions);
+        });
+
         /* Used to keep track only once we passed the fake div we added after div.content so
         we can position absolutely the scrollspy navigation
          */

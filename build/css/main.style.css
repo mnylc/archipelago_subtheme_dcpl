@@ -12924,6 +12924,35 @@ body.noscroll {
     min-height: 12rem;
   }
 }
+.page .banner-animated.in-viewport-banner {
+  transform: rotateX(0deg);
+  -webkit-mask-size: 80% auto;
+          mask-size: 80% auto;
+}
+.page .banner-one {
+  -webkit-mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-1.png");
+          mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-1.png");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 150% auto;
+          mask-size: 150% auto;
+  transform: rotateX(15deg);
+  transition: transform 600ms ease-in-out, -webkit-mask-size 600ms ease-in-out;
+  transition: mask-size 600ms ease-in-out, transform 600ms ease-in-out;
+  transition: mask-size 600ms ease-in-out, transform 600ms ease-in-out, -webkit-mask-size 600ms ease-in-out;
+}
+.page .banner-two {
+  -webkit-mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
+          mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 140% auto;
+          mask-size: 140% auto;
+  transform: rotateX(35deg);
+  transition: transform 600ms ease-in-out, -webkit-mask-size 600ms ease-in-out;
+  transition: mask-size 600ms ease-in-out, transform 600ms ease-in-out;
+  transition: mask-size 600ms ease-in-out, transform 600ms ease-in-out, -webkit-mask-size 600ms ease-in-out;
+}
 .page #main-nav-bar {
   min-height: 10rem;
   padding-bottom: 2rem;

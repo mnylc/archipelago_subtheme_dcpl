@@ -233,6 +233,27 @@ import Popover from 'bootstrap/js/dist/popover';
       }
       $(once('attache_observer', '.page-wrapper', context))
         .each(function (index, value) {
+
+            /* checking if something is visible */
+          console.log('attaching observers');
+          const inViewport = (entries, observer) => {
+            entries.forEach(entry => {
+              console.log(entry.intersectionRatio);
+              entry.target.classList.toggle("in-viewport-banner", entry.isIntersecting);
+            });
+          };
+
+          const Obs = new IntersectionObserver(inViewport);
+          const obsOptions = { rootMargin: '-15% 0% -15% 0%',}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+          // Attach observer to every [data-inviewport] element:
+          document.querySelectorAll('.banner-animated').forEach(el => {
+            Obs.observe(el, obsOptions);
+          });
+
+
+
+
             /* Used to keep track only once we passed the fake div we added after div.content so
             we can position absolutely the scrollspy navigation
              */

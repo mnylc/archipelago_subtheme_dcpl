@@ -32,6 +32,30 @@ body.noscroll {
 
 .page {
 
+  .banner-animated.in-viewport-banner {
+    transform: rotateX(0deg);
+    mask-size: 80% auto;
+  }
+
+
+  .banner-one {
+    mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-1.png");
+    mask-repeat: no-repeat;
+    mask-size: 150% auto;
+    transform: rotateX(15deg);
+    transition: mask-size 600ms ease-in-out, transform 600ms ease-in-out ;
+  }
+
+  .banner-two {
+    mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
+    mask-repeat: no-repeat;
+    mask-size: 140% auto;
+    transform: rotateX(35deg);
+    transition: mask-size 600ms ease-in-out, transform 600ms ease-in-out;
+  }
+
+
+
   #main-nav-bar {
     min-height: 10rem;
     padding-bottom: 2rem;
