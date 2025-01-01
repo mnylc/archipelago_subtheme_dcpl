@@ -33,25 +33,26 @@ body.noscroll {
 .page {
 
   .banner-animated.in-viewport-banner {
-    transform: rotateX(0deg);
-    mask-size: 80% auto;
+    transform: rotate(0) translateX(0);
+    mask-size: contain;
   }
 
-
   .banner-one {
+    transition: mask-size 600ms ease-in-out, transform 600ms ease-out ;
+    transform: rotate(-7deg) translateX(2rem);
+    transform-origin: top left;
     mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-1.png");
     mask-repeat: no-repeat;
-    mask-size: 150% auto;
-    transform: rotateX(15deg);
-    transition: mask-size 600ms ease-in-out, transform 600ms ease-in-out ;
+    mask-size: 200% 200%;
   }
 
   .banner-two {
+    transition: mask-size 500ms ease-in-out, transform 500ms ease-out;
+    transform-origin: top left;
+    transform: rotate(7deg) translateX(2rem);
     mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
     mask-repeat: no-repeat;
-    mask-size: 140% auto;
-    transform: rotateX(35deg);
-    transition: mask-size 600ms ease-in-out, transform 600ms ease-in-out;
+    mask-size: 200% 200%;
   }
 
 
