@@ -13141,6 +13141,13 @@ div[data-drupal-selector=edit-actions] {
   gap: 0.5rem !important;
 }
 
+.btn-primary a, .btn-secondary a, .btn-tertiary a {
+  --bs-link-color-rgb: 250, 248, 247;
+}
+.btn-primary a:hover, .btn-secondary a:hover, .btn-tertiary a:hover {
+  --bs-link-color-rgb: 252, 251, 252;
+}
+
 /* webforms */
 .archipelago-subtheme-dcpl .js-form-item.js-webform-states-hidden,
 .archipelago-subtheme-dcpl .js-form-submit.js-webform-states-hidden,

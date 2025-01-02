@@ -225,9 +225,14 @@ div[data-drupal-selector="edit-actions"] {
   gap: 0.5rem !important;
 }
 
-
-
-
+.btn-primary, .btn-secondary, .btn-tertiary {
+    a {
+      --bs-link-color-rgb: #{$white-rgb};
+      &:hover {
+        --bs-link-color-rgb: #{$white-light-rgb};
+      }
+    }
+}
 
   /* webforms */
 .archipelago-subtheme-dcpl {
