@@ -101,11 +101,32 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-.archipelago-subtheme-dcpl {
+@media (min-width: 1400px) {
+  // Override for any text marked as light over White background
+  #sidebar-first-content {
+    .bg-blue {
+      .block__title {
+        color: var(--bs-heading-color);
+      }
+      .nav, navbar-nav {
+        --bs-nav-link-color: var(--bs-link-color);
+        --bs-nav-link-hover-color: var(--bs-link-hover-color);
+        --bs-emphasis-color-rgb: #{$primary-emphasis};
+      }
+    }
+  }
+}
 
+
+
+.archipelago-subtheme-dcpl {
   // Override for any text marked as light over White background
   .bg-blue {
+    .block__title {
+      color: #{$white};
+    }
     .nav,navbar-nav {
+      flex-direction: column;
       --bs-nav-link-hover-color: #{$primary-emphasis};
       --bs-emphasis-color-rgb: rgb(#{$white-light});
       --bs-nav-link-color: #{$white};
