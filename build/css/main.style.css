@@ -12924,31 +12924,29 @@ body.noscroll {
     min-height: 12rem;
   }
 }
+.page {
+  /* To be used on carousels on front page or any other place */
+}
 .page .banner-animated.in-viewport-banner {
   transform: rotate(0) translate(0, 0);
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  transition: 0.5s;
 }
 .page .banner-one {
-  transform: rotate(-13deg) translate(2rem, 1rem);
+  transition: 0.5s;
+  filter: url("#svg-round-filter");
+  transform: rotate(17deg) translate(3rem, 1rem);
   transform-origin: center;
-  -webkit-mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-1.png");
-          mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-1.png");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: 200% 200%;
-          mask-size: 200% 200%;
+}
+.page .banner-one .carousel {
+  clip-path: polygon(3% 5%, 96% 3%, 96% 96%, 6% 90%);
 }
 .page .banner-two {
+  transition: 0.7s;
+  filter: url("#svg-round-filter");
+  transform: rotate(-15deg) translate(3rem, 1rem);
   transform-origin: center;
-  transform: rotate(17deg) translate(3rem, 1rem);
-  -webkit-mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
-          mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: 200% 200%;
-          mask-size: 200% 200%;
+}
+.page .banner-two .carousel {
+  clip-path: polygon(3% 9%, 94% 3%, 94% 89%, 8% 92%);
 }
 .page #main-nav-bar {
   min-height: 10rem;
