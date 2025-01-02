@@ -32,14 +32,14 @@
     <{{ list_type }}{{ attributes.addClass('facet-summary','ms-0','ps-0') }}>
       {%- for item in items -%}
         {%- if item.value['#theme'] is defined and (item.value['#theme'] == 'facets_summary_count' or item.value['#theme'] == 'facets_summary_empty') -%}
-          <li{{ item.attributes.addClass('facet-summary-item--count','me-1')}}>
+          <li{{ item.attributes.addClass('facet-summary-item--count','me-1', 'mb-1')}}>
         {%- else -%}
             {%- if item.attributes.hasClass('facet-summary-item--query') -%}
-        <li{{ item.attributes.addClass('btn','btn-secondary','btn', 'me-1')}}>
+        <li{{ item.attributes.addClass('btn','btn-secondary','btn', 'me-1' , 'mb-1')}}>
             {%-  elseif item.attributes.hasClass('facet-summary-item--clear')  -%}
-        <li{{ item.attributes.addClass('btn','btn-tertiary','btn', 'me-1')}}>
+        <li{{ item.attributes.addClass('btn','btn-tertiary','btn', 'me-1', 'mb-1')}}>
             {%-  else -%}
-        <li{{ item.attributes.addClass('btn','btn-primary','btn', 'me-1')}}>
+        <li{{ item.attributes.addClass('btn','btn-primary','btn', 'me-1', 'mb-1')}}>
             {%- endif -%}
         {%- endif -%}
         {{ item.value }}</li>
