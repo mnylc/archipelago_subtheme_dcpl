@@ -113,7 +113,9 @@ h1, h2, h3, h4, h5, h6 {
         --bs-nav-link-hover-color: var(--bs-link-hover-color);
         --bs-emphasis-color-rgb: #{$primary-emphasis};
         --bs-navbar-active-color: #{$primary-emphasis};
-
+        .nav-link.active {
+          color: #{$primary-emphasis};
+        }
       }
     }
   }

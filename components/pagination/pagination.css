@@ -36,6 +36,9 @@ h1, h2, h3, h4, h5, h6 {
     --bs-emphasis-color-rgb: #dc8461;
     --bs-navbar-active-color: #dc8461;
   }
+  #sidebar-first-content .bg-blue .nav .nav-link.active, #sidebar-first-content .bg-blue navbar-nav .nav-link.active {
+    color: #dc8461;
+  }
 }
 .archipelago-subtheme-dcpl .bg-blue .block__title {
   color: rgb(250, 248, 247);
