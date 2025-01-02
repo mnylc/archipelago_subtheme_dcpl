@@ -13039,6 +13039,7 @@ body.scrolled {
 #sidebar-first-content {
   transition: top 0.3s;
   top: 8rem;
+  --bs-navbar-padding-y: 0rem;
 }
 
 #offcanvas-toggler-container {
