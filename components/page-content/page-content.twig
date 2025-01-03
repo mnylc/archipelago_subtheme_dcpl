@@ -58,7 +58,6 @@
 		</header>
 	{% endif %}
   {% if page.sidebar_first %}
-
     {#  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
@@ -180,7 +179,7 @@
     </div>
   {% endif %}
     {% if page.content_right %}
-      <div class="page__content col col-lg-3 order-lg-last order-first" id="main-content">
+      <div class="page__content col col-lg-3 order-lg-last order-first" id="main-content-right">
         <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
           {% block page_inner_content_right %}
             {{ page.content_right }}
@@ -188,6 +187,37 @@
         </div>
       </div>
     {% endif %}
+    {#  Bottom region #}
+    <div class="page__content page__content__bottom row">
+      {% if page.content_bottom %}
+        <div class="col" id="content-bottom">
+          <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
+            {% block page_bottom_content %}
+              {{ page.content_bottom }}
+            {% endblock %}
+          </div>
+        </div>
+      {% endif %}
+      {% if page.content_bottom_sidebar %}
+        <div class="page__content  page__content__bottom_sidebar col col-lg-3 order-first" id="content-bottom-sidebar">
+          <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
+            {% block page_bottom_content_sidebar %}
+              {{ page.content_bottom_sidebar }}
+            {% endblock %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    {% if page.content_last %}
+      <div class="page__content page__content_last row">
+        <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
+          {% block page_content_last %}
+            {{ page.content_last }}
+          {% endblock %}
+        </div>
+      </div>
+    {% endif %}
+
     <a href="#" class="back-to-top" rel="nofollow">
       <i class="fas fa-chevron-up"></i>
       <span class="sr-only">Back to top</span>

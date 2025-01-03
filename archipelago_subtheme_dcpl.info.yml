@@ -24,7 +24,9 @@ regions:
   sidebar_first: 'Sidebar First (Off canvas)'
   content: Content
   content_right: 'Content Right Sidebar 3 cols width (of 12)'
-  page_bottom: 'Page bottom'
+  content_bottom: 'Content Bottom'
+  content_bottom_sidebar: 'Content Bottom Sidebar 3 cols width (of 12) to the left'
+  content_last: 'Last Bottom 12 col width'
   footer: Footer
 libraries:
   - archipelago_subtheme_dcpl/style
