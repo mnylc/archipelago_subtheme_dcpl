@@ -33,7 +33,9 @@ body.noscroll {
 .page {
   /* To be used on carousels on front page or any other place */
   .banner-animated.in-viewport-banner {
-    transform: rotate(0) translate(0,0);
+    .view-content {
+      transform: rotate(0) translate(0, 0);
+    }
   }
   .carousel-item-title {
     background-color: #{white};
@@ -42,35 +44,41 @@ body.noscroll {
   }
 
   .banner-one {
-    transition: 0.5s;
-    filter: url("#svg-round-filter");
-    transform: rotate(17deg) translate(3rem, 1rem);
-    transform-origin: center;
-    .carousel {
-      clip-path: polygon(3% 5%, 96% 3%, 96% 96%, 6% 90%);
-      //mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-1.png");
-      //mask-repeat: no-repeat;
-      //mask-size: 200% 200%;
+    .view-content {
+      transition: 0.5s;
+      filter: url("#svg-round-filter");
+      transform: rotate(17deg) translate(3rem, 1rem);
+      transform-origin: center;
+
+      .carousel {
+        clip-path: polygon(3% 5%, 96% 3%, 96% 96%, 6% 90%);
+        //mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-1.png");
+        //mask-repeat: no-repeat;
+        //mask-size: 200% 200%;
+      }
     }
   }
 
   .banner-two {
-    transition: 0.7s;
-    filter: url("#svg-round-filter");
-    transform: rotate(-15deg) translate(3rem, 1rem);
-    transform-origin: center;
-
-    .carousel {
-      clip-path: polygon(3% 9%, 94% 3%, 94% 89%, 8% 92%);
-      //mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
-      //mask-repeat: no-repeat;
-      //mask-size: 200% 200%;
+    .view-content {
+      transition: 0.7s;
+      filter: url("#svg-round-filter");
+      transform: rotate(-15deg) translate(3rem, 1rem);
+      transform-origin: center;
+      .carousel {
+        clip-path: polygon(3% 9%, 94% 3%, 94% 89%, 8% 92%);
+        //mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
+        //mask-repeat: no-repeat;
+        //mask-size: 200% 200%;
+      }
     }
   }
 
   .banner-two.banner-right {
-    .carousel {
-      clip-path: polygon(2% 8%, 94% 11%, 94% 97%, 3% 91%);
+    .view-content {
+      .carousel {
+        clip-path: polygon(2% 8%, 94% 11%, 94% 97%, 3% 91%);
+      }
     }
   }
 

@@ -12963,7 +12963,7 @@ body.noscroll {
 .page {
   /* To be used on carousels on front page or any other place */
 }
-.page .banner-animated.in-viewport-banner {
+.page .banner-animated.in-viewport-banner .view-content {
   transform: rotate(0) translate(0, 0);
 }
 .page .carousel-item-title {
@@ -12971,25 +12971,25 @@ body.noscroll {
   border-radius: 0.175rem;
   padding: 0.25em;
 }
-.page .banner-one {
+.page .banner-one .view-content {
   transition: 0.5s;
   filter: url("#svg-round-filter");
   transform: rotate(17deg) translate(3rem, 1rem);
   transform-origin: center;
 }
-.page .banner-one .carousel {
+.page .banner-one .view-content .carousel {
   clip-path: polygon(3% 5%, 96% 3%, 96% 96%, 6% 90%);
 }
-.page .banner-two {
+.page .banner-two .view-content {
   transition: 0.7s;
   filter: url("#svg-round-filter");
   transform: rotate(-15deg) translate(3rem, 1rem);
   transform-origin: center;
 }
-.page .banner-two .carousel {
+.page .banner-two .view-content .carousel {
   clip-path: polygon(3% 9%, 94% 3%, 94% 89%, 8% 92%);
 }
-.page .banner-two.banner-right .carousel {
+.page .banner-two.banner-right .view-content .carousel {
   clip-path: polygon(2% 8%, 94% 11%, 94% 97%, 3% 91%);
 }
 .page #main-nav-bar {
