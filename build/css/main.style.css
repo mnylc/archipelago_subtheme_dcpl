@@ -12989,6 +12989,9 @@ body.noscroll {
 .page .banner-two .carousel {
   clip-path: polygon(3% 9%, 94% 3%, 94% 89%, 8% 92%);
 }
+.page .banner-two.banner-right .carousel {
+  clip-path: polygon(2% 8%, 94% 11%, 94% 97%, 3% 91%);
+}
 .page #main-nav-bar {
   min-height: 10rem;
   padding-bottom: 2rem;
