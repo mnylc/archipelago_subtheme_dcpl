@@ -31,7 +31,7 @@ body.noscroll {
 
 
 .page {
- /* To be used on carousels on front page or any other place */
+  /* To be used on carousels on front page or any other place */
   .banner-animated.in-viewport-banner {
     transform: rotate(0) translate(0,0);
   }
@@ -59,17 +59,19 @@ body.noscroll {
     filter: url("#svg-round-filter");
     transform: rotate(-15deg) translate(3rem, 1rem);
     transform-origin: center;
+
     .carousel {
       clip-path: polygon(3% 9%, 94% 3%, 94% 89%, 8% 92%);
       //mask-image: url("/themes/custom/archipelago_subtheme_dcpl/build/images/mask-banner-2.png");
       //mask-repeat: no-repeat;
       //mask-size: 200% 200%;
     }
+  }
 
-    .banner-two.banner-right {
-      .carousel {
-        clip-path: polygon(2% 8%, 94% 11%, 94% 97%, 3% 91%);
-      }
+  .banner-two.banner-right {
+    .carousel {
+      clip-path: polygon(2% 8%, 94% 11%, 94% 97%, 3% 91%);
+    }
   }
 
   #main-nav-bar {
@@ -217,13 +219,13 @@ body:not(.scrolled) {
 }
 
 
-  .btn-primary {
-    @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($blue, 25%), $white);
-  }
+.btn-primary {
+  @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($blue, 25%), $white);
+}
 
-  .btn-outline-primary {
-    @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($primary, 25%), $white);
-  }
+.btn-outline-primary {
+  @include button-variant($primary, darken($primary, 10%), $white, $blue, lighten($primary, 25%), $white);
+}
 
 a.button:not(.btn){
   @extend .btn;
@@ -239,19 +241,19 @@ div[data-drupal-selector="edit-actions"] {
 }
 
 .btn-primary, .btn-secondary, .btn-tertiary {
-    a {
-      --bs-link-color-rgb: #{$white-rgb};
-      text-decoration: none;
-      display: flex;
-      height: 100%;
-      width: 100%;
-      &:hover {
-        --bs-link-color-rgb: #{$white-light-rgb};
-      }
+  a {
+    --bs-link-color-rgb: #{$white-rgb};
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    &:hover {
+      --bs-link-color-rgb: #{$white-light-rgb};
     }
+  }
 }
 
-  /* webforms */
+/* webforms */
 .archipelago-subtheme-dcpl {
   .js-form-item.js-webform-states-hidden,
   .js-form-submit.js-webform-states-hidden,
