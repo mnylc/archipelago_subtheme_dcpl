@@ -135,7 +135,9 @@ body {
   pointer-events: all;
 }
 
-
+input[data-drupal-selector="edit-reset"] {
+  @include button-variant($tertiary, darken($tertiary, 10%), $white, lighten($tertiary, 10%), lighten($tertiary, 25%), $white);
+}
 
 body.scrolled {
   /* Extras */
@@ -229,6 +231,10 @@ div[data-drupal-selector="edit-actions"] {
 .btn-primary, .btn-secondary, .btn-tertiary {
     a {
       --bs-link-color-rgb: #{$white-rgb};
+      text-decoration: none;
+      display: flex;
+      height: 100%;
+      width: 100%;
       &:hover {
         --bs-link-color-rgb: #{$white-light-rgb};
       }
