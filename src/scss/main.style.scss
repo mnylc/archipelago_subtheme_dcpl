@@ -35,6 +35,11 @@ body.noscroll {
   .banner-animated.in-viewport-banner {
     transform: rotate(0) translate(0,0);
   }
+  .carousel-item-title {
+    background-color: #{white};
+    border-radius: #{$border-radius};
+    padding: .25em;
+  }
 
   .banner-one {
     transition: 0.5s;
@@ -60,6 +65,11 @@ body.noscroll {
       //mask-repeat: no-repeat;
       //mask-size: 200% 200%;
     }
+
+    .banner-two.banner-right {
+      .carousel {
+        clip-path: polygon(2% 8%, 94% 11%, 94% 97%, 3% 91%);
+      }
   }
 
   #main-nav-bar {

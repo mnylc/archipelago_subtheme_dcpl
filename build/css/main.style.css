@@ -12966,6 +12966,11 @@ body.noscroll {
 .page .banner-animated.in-viewport-banner {
   transform: rotate(0) translate(0, 0);
 }
+.page .carousel-item-title {
+  background-color: white;
+  border-radius: 0.175rem;
+  padding: 0.25em;
+}
 .page .banner-one {
   transition: 0.5s;
   filter: url("#svg-round-filter");
