@@ -2,6 +2,7 @@
 import "./_bootstrap";
 import ScrollSpy from 'bootstrap/js/dist/scrollspy';
 import Popover from 'bootstrap/js/dist/popover';
+import Carousel from 'bootstrap/js/dist/carousel';
 
 // * Any other global site-wide JavaScript should be placed below.
 (function ($, Drupal, once, Mark) {
@@ -229,6 +230,11 @@ import Popover from 'bootstrap/js/dist/popover';
         var popoverTriggerList = [].slice.call(context.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
           return new Popover(popoverTriggerEl)
+        })
+        // Attach Carousel Actions to the ones loaded via Ajax.
+        var carouselTriggerList = [].slice.call(context.querySelectorAll('[data-bs-ride="carousel"]'))
+        const carousel = carouselTriggerList.map(function (CarouselEl) {
+          Carousel.getOrCreateInstance(CarouselEl);
         })
       }
       $(once('attache_observer', '.page-wrapper', context))
