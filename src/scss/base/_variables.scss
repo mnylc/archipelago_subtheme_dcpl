@@ -197,6 +197,16 @@ h1, h2, h3, h4, h5, h6 {
     --bs-offcanvas-height: 35vh
   }
 
+  @media (max-width: 992px) {
+    #search-nav {
+      --bs-offcanvas-height: 75vh;
+    }
+    #menu-nav {
+      --bs-offcanvas-height: 75vh;
+    }
+  }
+
+
   @media (min-width: 1400px) {
     /* We do this because we have an off canvas that turns into a column on XXL displays */
     .col-xxl-3.navbar-expand-xxl .offcanvas {

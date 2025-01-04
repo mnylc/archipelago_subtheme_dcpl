@@ -95,6 +95,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .archipelago-subtheme-dcpl #search-nav {
   --bs-offcanvas-height: 35vh ;
 }
+@media (max-width: 992px) {
+  .archipelago-subtheme-dcpl #search-nav {
+    --bs-offcanvas-height: 75vh;
+  }
+  .archipelago-subtheme-dcpl #menu-nav {
+    --bs-offcanvas-height: 75vh;
+  }
+}
 @media (min-width: 1400px) {
   .archipelago-subtheme-dcpl {
     /* We do this because we have an off canvas that turns into a column on XXL displays */
@@ -674,6 +682,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .archipelago-subtheme-dcpl #search-nav {
   --bs-offcanvas-height: 35vh ;
+}
+@media (max-width: 992px) {
+  .archipelago-subtheme-dcpl #search-nav {
+    --bs-offcanvas-height: 75vh;
+  }
+  .archipelago-subtheme-dcpl #menu-nav {
+    --bs-offcanvas-height: 75vh;
+  }
 }
 @media (min-width: 1400px) {
   .archipelago-subtheme-dcpl {
