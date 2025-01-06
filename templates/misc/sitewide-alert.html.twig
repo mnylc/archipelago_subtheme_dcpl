@@ -22,13 +22,15 @@
  */
 #}
 <div {{ attributes }}>
+  <div class="d-inline-flex w-100">
   {% if content -%}
-    <div class="flex-inline w-100">{{- content -}}</div>
+   {{- content -}}
   {%- endif %}
   {% if is_dismissible -%}
   {# The dismiss (close) button must have the class js-dismiss-button in order to work. #}
-    <button class="btn-close text-primary js-dismiss-button" aria-label="{{ 'close'|t }}">
+    <button class="btn-close align-self-end justify-content-end text-primary js-dismiss-button" aria-label="{{ 'close'|t }}">
       <span aria-hidden="true">×</span>
     </button>
   {%- endif %}
+  </div>
 </div>
