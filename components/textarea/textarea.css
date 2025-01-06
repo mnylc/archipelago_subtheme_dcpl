@@ -234,7 +234,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(15px, 7px) rotate(50deg);
 }
 
-.visually-hidden, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .views-exposed-form label {
+.visually-hidden, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper label, .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper legend, .views-exposed-form.advanced-search-box .form-row fieldset.form-wrapper label, .views-exposed-form label {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -358,9 +358,13 @@ fieldset {
   display: flex;
   align-items: end;
 }
+.advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper > div.mb-3 {
+  margin-botton: 0 !important;
+}
 .advanced-search-box .views-exposed-form .form-row fieldset.form-wrapper .js-form-item {
   display: flex;
   flex-grow: 1;
+  margin-bottom: 0rem;
 }
 
 .advanced-search-box .form-actions.mb-3 {
