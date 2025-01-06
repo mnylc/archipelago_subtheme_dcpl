@@ -3,6 +3,23 @@
 // Custom overrides
 @import "base/variables";
 
+$utilities: (
+  'width': (
+    property: width,
+    class: w,
+    responsive: true,
+    values: (
+      25: 25%,
+      33: 33%,
+      50: 50%,
+      66: 66%,
+      75: 75%,
+      100: 100%,
+      auto: auto,
+    ),
+  )
+);
+
 // Required
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/variables-dark";
