@@ -29,7 +29,7 @@
   {% if is_dismissible -%}
   {# The dismiss (close) button must have the class js-dismiss-button in order to work. #}
     <button class="btn-close align-self-end justify-content-end text-primary js-dismiss-button" aria-label="{{ 'close'|t }}">
-      <span aria-hidden="true">×</span>
+      <span class="visually-hidden" aria-hidden="true">×</span>
     </button>
   {%- endif %}
   </div>
