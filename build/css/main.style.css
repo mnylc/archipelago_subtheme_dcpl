@@ -13311,9 +13311,16 @@ div[data-drupal-selector=edit-actions] {
   display: flex;
   height: 100%;
   width: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 .btn-primary a:hover, .btn-secondary a:hover, .btn-tertiary a:hover {
   --bs-link-color-rgb: 252, 251, 252;
+}
+
+a.btn-primary, a.btn-secondary, a.btn-tertiary {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 /* webforms */
